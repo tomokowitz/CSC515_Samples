@@ -1,0 +1,910 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="js1_files/filelist.xml">
+<link rel=Edit-Time-Data href="js1_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>JavaScript Introduction</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceType"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceName"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="City"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>john</o:Author>
+  <o:LastAuthor>john</o:LastAuthor>
+  <o:Revision>5</o:Revision>
+  <o:TotalTime>36</o:TotalTime>
+  <o:Created>2007-02-06T19:08:00Z</o:Created>
+  <o:LastSaved>2007-02-06T19:44:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>1978</o:Words>
+  <o:Characters>11279</o:Characters>
+  <o:Company>home</o:Company>
+  <o:Lines>93</o:Lines>
+  <o:Paragraphs>26</o:Paragraphs>
+  <o:CharactersWithSpaces>13231</o:CharactersWithSpaces>
+  <o:Version>10.3501</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+tt
+	{font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]-->
+<meta name=Author content="John Avitabile">
+</head>
+
+<body lang=EN-US link=blue vlink=blue style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:13.5pt'>Introduction to JavaScript</span></p>
+
+<p>A brief organizational matter first. All scripts and other information will
+appear on this page. But there are links to other pages that actually run the
+scripts. On each page that has a script running, there will be a back link to
+take you to this page again. </p>
+
+<p>JavaScript is a scripting language. The code you write is in the HTML page
+inside a &lt;SCRIPT&gt; container. For example, the next page has a script that
+prompts you for your name, and prints your name along with the current
+date:&nbsp;<a name=ex1></a><a href="ex1.htm">Go to First Example</a> </p>
+
+<p>The script for the first example is: </p>
+
+<p><tt><span style='font-size:10.0pt'>&lt;html&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; &lt;title&gt;Example
+1&lt;/title&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;<span class=SpellE>your_name</span> =
+prompt(&quot;What's your name?&quot;, &quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;<span class=SpellE>document.writeln</span>(&quot;Hello
+&lt;b&gt;&quot; + <span class=SpellE>your_name</span> +
+&quot;&lt;/b&gt;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;<span class=SpellE>document.writeln</span>(&quot;&lt;p&gt;Today
+is &quot; + Date());</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>This is the regular page.</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;a <span class=SpellE>href</span>=&quot;js1.htm&quot;&gt;
+Go Back &lt;/a&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/html&gt;</span></tt> </p>
+
+<p>As you can see, the script appears in the body of the html page. </p>
+
+<p>The first line of code assigns a value to the variable <span class=SpellE>your_name</span>.
+As you can see, you do not need to declare this variable or give it a type. </p>
+
+<p>The value comes from the return value of the prompt function. The prompt
+function displays a prompt on the screen. The first argument of the function is
+the prompt the user sees. The second argument is the default value (in this
+case, there is no default value). </p>
+
+<p>To write to the HTML page itself, you use the <span class=SpellE>document.writeln</span>
+function, as is done in the second and third statements. In these <span
+class=SpellE>stements</span>, we execute the <span class=SpellE>writeln</span>
+function on the document object. The argument of <span class=SpellE>writeln</span>
+is a string. As you can see, the string can be constructed using the
+concatenation operator. HTML commands can be part of that string. </p>
+
+<p>In the second statement, a variable's value is part of the string that's
+printed. </p>
+
+<p>In the third statement, the return value of the <span class=GramE>Date(</span>)
+function is included in the string. </p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>In the <a href="ex2.htm">next example</a>, we use an alert function.<a
+name=ex2></a> </p>
+
+<p>The script for this example is also inside the body container: </p>
+
+<p><tt><span style='font-size:10.0pt'>&lt;<span class=GramE>body</span>&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;script language=<span class=SpellE>javascript</span>&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;<span class=SpellE>your_name</span> =
+prompt(&quot;Who are you?&quot;,&quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;alert(&quot;Welcome to the second
+example, &quot; + <span class=SpellE>your_name</span>);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/script&gt;</span></tt> </p>
+
+<p>The alert function has just one string argument. </p>
+
+<p>Also note that the language attribute of the script command has been set to <span
+class=SpellE>javascript</span>. This is not necessary - as long as your browser
+uses JavaScript as its default scripting language. </p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>There are a couple of other places where you can put your scripts. We could
+put this script in the head container instead, as is done in the&nbsp;<a
+name=ex3></a><a href="ex3.htm">third example</a>: </p>
+
+<p>When the script is in the head container, it's executed before the page is
+loaded. </p>
+
+<p><tt><span style='font-size:10.0pt'>&lt;html&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; &lt;title&gt;Example
+3&lt;/title&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;script language=<span class=SpellE>javascript</span>&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;<span class=SpellE>your_name</span> =
+prompt(&quot;Who are you?&quot;,&quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;alert(&quot;Welcome to the second
+example, &quot; + <span class=SpellE>your_name</span>);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;<span class=SpellE>document.writeln</span>(&quot;Hello
+&lt;b&gt;&quot; + <span class=SpellE>your_name</span> +
+&quot;&lt;/b&gt;!&lt;P&gt;&quot;)</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>This is the regular page.</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;a <span class=SpellE>href</span>=&quot;js1.htm#ex3&quot;&gt;
+Go Back &lt;/a&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/html&gt;</span></tt> </p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>Another place to put the script is inside the body command as part of an
+event handler. One such event handler is <span class=SpellE><span class=GramE>onload</span></span>.
+In&nbsp;<a name=ex4></a><a href="ex4.htm">this example</a>, the code is
+executed after the page is loaded: </p>
+
+<p><tt><span style='font-size:10.0pt'>&lt;<span class=GramE>html</span>&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; &lt;title&gt;Example
+4&lt;/title&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;body <span class=SpellE>onload</span>=&quot;<span
+class=SpellE>your_name</span> = prompt('Who are you?','');</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+alert('Welcome to the second example, ' + <span class=SpellE>your_name</span>);&quot;&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>This is the regular page.</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;a <span class=SpellE>href</span>=&quot;js1.htm#ex4&quot;&gt;
+Go Back &lt;/a&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/html&gt;</span></tt> </p>
+
+<p>If there were <span class=SpellE>document.writeln</span> statements inside
+the code now, the code would replace the contents of the page. </p>
+
+<p>As you can the way you put code inside the <span class=SpellE>onload</span>
+attribute is: </p>
+
+<p>&nbsp;&nbsp;&nbsp; <span class=SpellE><span class=GramE><tt><span
+style='font-size:10.0pt'>onload</span></tt></span></span><tt><span
+style='font-size:10.0pt'>=&quot;statement1; statement2;&quot;</span></tt> </p>
+
+<p>Since we now can no longer use double quotes inside the statements, we can
+use single quotes instead. </p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>Since a longer script might be awkward to place inside the quotes, we can
+write a function that gets called inside the <span class=SpellE>onload</span>
+event handler, as occurs in the&nbsp;<a name=ex5></a><a href="ex5.htm">following
+example</a>: </p>
+
+<p><tt><span style='font-size:10.0pt'>&lt;<span class=GramE>html</span>&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; &lt;title&gt;Example
+5&lt;/title&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>function <span class=SpellE>WelcomeMessage</span>()</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>your_name</span> =
+prompt(&quot;Who are you?&quot;,&quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; alert(&quot;Welcome to the fifth
+example, &quot; + <span class=SpellE>your_name</span>);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>}</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;body <span class=SpellE>onload</span>=&quot;<span
+class=SpellE>WelcomeMessage</span>();&quot;&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>This is the regular page.</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;a <span class=SpellE>href</span>=&quot;js1.htm#ex5&quot;&gt;
+Go Back &lt;/a&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/html&gt;</span></tt> </p>
+
+<p>Notice that the function definition is within a script container within the
+head container. </p>
+
+<p>The general form of an <span class=SpellE>argumentless</span> function is: </p>
+
+<p><span class=GramE><tt><span style='font-size:10.0pt'>function</span></tt></span><tt><span
+style='font-size:10.0pt'> <span class=SpellE>functionName</span>()</span></tt> <br>
+<tt><span style='font-size:10.0pt'>{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; statement1;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; statement2;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; etc.</span></tt> <br>
+<tt><span style='font-size:10.0pt'>}</span></tt> </p>
+
+<p>You call a function the usual way. </p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>You can also call a function inside of a regular script, as in the&nbsp;<a
+name=ex6></a><a href="ex6.htm">sixth example</a>: </p>
+
+<p><tt><span style='font-size:10.0pt'>&lt;html&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; &lt;title&gt;Example
+6&lt;/title&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>function <span class=SpellE>WelcomeMessage</span>()</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>your_name</span> =
+prompt(&quot;Who are you?&quot;,&quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; alert(&quot;Welcome to the sixth
+example, &quot; + <span class=SpellE>your_name</span>);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>document.writeln</span>(&quot;Welcome
+&lt;b&gt;&quot; + <span class=SpellE>your_name</span> +
+&quot;&lt;/b&gt;!&lt;p&gt;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>}</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>WelcomeMessage</span>();</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;/script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>This is the regular page.</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;a <span class=SpellE>href</span>=&quot;js1.htm#ex6&quot;&gt;
+Go Back &lt;/a&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/html&gt;</span></tt> </p>
+
+<p>Why is it OK to have a <span class=SpellE>document.writeln</span> inside
+this <span class=SpellE>WelcomeMessage</span> function, but it would not have
+been in the earlier <span class=SpellE>WelcomeMessage</span> function? </p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>Another place to put code is inside the event handler for a form object. In
+the&nbsp;<a name=ex7></a><a href="ex7.htm">next example</a>, the <span
+class=SpellE>WelcomeMessage</span> function is executed when the user clicks a
+button: </p>
+
+<p><tt><span style='font-size:10.0pt'>&lt;html&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; &lt;title&gt;Example
+7&lt;/title&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>function <span class=SpellE>WelcomeMessage</span>()</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>your_name</span> =
+prompt(&quot;Who are you?&quot;,&quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; alert(&quot;Welcome to the seventh
+example, &quot; + <span class=SpellE>your_name</span>);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>}</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;form&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;input type=button name=button1
+value=&quot;Click Me&quot; <span class=SpellE>onclick</span>=<span
+class=SpellE>WelcomeMessage</span>()&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/form&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>This is the regular page.</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;a <span class=SpellE>href</span>=&quot;js1.htm#ex7&quot;&gt;
+Go Back &lt;/a&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/html&gt;</span></tt> </p>
+
+<p><span class=GramE>Again, no <span class=SpellE>document.writeln</span>
+statements inside the function, since it would replace the body of the page.</span>
+</p>
+
+<p>We use the <span class=SpellE>onclick</span> attribute to show what should
+be executed when the button is clicked. </p>
+
+<p>Also note that JavaScript is sort of sloppy. There are no quotes around the
+script inside the <span class=SpellE>onclick</span> handler, and there is no
+semi-colon after the function call; but it all works anyway. </p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>You can also put code inside <span class=GramE>a</span> <span class=SpellE>A</span>
+tag. Although we could write code for the <span class=SpellE>onClick</span>
+handler, the&nbsp;<a name=ex8></a><a href="ex8.htm">following example</a>
+executes code for <span class=GramE>a</span> <span class=SpellE>onMouseOver</span>
+handler: </p>
+
+<p><tt><span style='font-size:10.0pt'>&lt;html&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; &lt;title&gt;Example
+8&lt;/title&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>function Encourage1()</span></tt> <br>
+<tt><span style='font-size:10.0pt'>{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>window.status</span>=&quot;Go
+ahead and click to go back!&quot;;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>}</span></tt> <br>
+<tt><span style='font-size:10.0pt'>function Encourage2()</span></tt> <br>
+<tt><span style='font-size:10.0pt'>{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>window.status</span>=&quot;Go
+ahead and click to go to St. Rose!&quot;;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>}</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;a <span class=SpellE>href</span>=&quot;http://www.strose.edu&quot;
+<span class=SpellE>onMouseOver</span>=&quot;Encourage2(); return true&quot;&gt;
+Go To St. Rose &lt;/a&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;a <span class=SpellE>href</span>=&quot;js1.htm#ex8&quot;
+<span class=SpellE>onMouseOver</span>=&quot;Encourage1(); return true&quot;&gt;
+Go Back &lt;/a&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/html&gt;</span></tt> </p>
+
+<p>A function gets called when you put the mouse over the hot text. The
+function changes the message in the window's status line (normally you see
+where the link goes to instead). It's also necessary to put return true in the
+code for the <span class=SpellE>onMouseOver</span> event handler - otherwise
+you'll still see the link location; but when you move the mouse away, then
+you'll see the status line message. Be aware that this works for IE, but not <span
+class=SpellE>Mozilla</span> <span class=SpellE>Firefox</span>.</p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>We can do the same trick inside an <span class=SpellE>imagemap</span>, as
+you can see in the&nbsp;<a name=ex9></a><a href="ex9.htm">next example</a>: </p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;<span
+class=GramE>html</span>&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;<span
+class=GramE>head</span>&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>&lt;<span class=GramE>title&gt;</span>Example
+9&lt;/title&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;<span
+class=GramE>script</span>&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><span class=GramE><tt><span
+style='font-size:10.0pt'>function</span></tt></span><tt><span style='font-size:
+10.0pt'> <span class=SpellE>FunctionOver</span>(<span class=SpellE>myText</span>)<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>{
+<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>document.getElementById</span></span><span
+class=GramE>(</span>&quot;info&quot;).<span class=SpellE>innerHTML</span>=&quot;Click
+on &quot; + <span class=SpellE>myText</span> + &quot;!&quot;;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>}<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;/script&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;/head&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;<span
+class=GramE>body</span>&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;<span
+class=SpellE>img</span> SRC=&quot;<span class=SpellE>boston.gif</span>&quot; <span
+class=SpellE>usemap</span>=&quot;#</span></tt><st1:City><st1:place><span
+  class=SpellE><tt><span style='font-size:10.0pt'>boston</span></tt></span></st1:place></st1:City><tt><span
+style='font-size:10.0pt'>&quot; height=250 width=400&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;map
+name=&quot;</span></tt><st1:City><st1:place><span class=SpellE><tt><span
+  style='font-size:10.0pt'>boston</span></tt></span></st1:place></st1:City><tt><span
+style='font-size:10.0pt'>&quot;&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;area
+shape=&quot;<span class=SpellE>rect</span>&quot; <span class=SpellE>href</span>=&quot;BunkerHill.htm&quot;
+<span class=SpellE>coords</span>=&quot;160<span class=GramE>,0,200,30</span>&quot;
+<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>onMouseOver</span></span>=&quot;<span
+class=SpellE>FunctionOver</span>('</span></tt><st1:place><tt><span
+ style='font-size:10.0pt'>Bunker Hill</span></tt></st1:place><tt><span
+style='font-size:10.0pt'>');&quot; <o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>onMouseOut</span></span>=&quot;<span
+class=SpellE>FunctionOver</span>(' a link')&quot;;&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;area
+shape=&quot;<span class=SpellE>rect</span>&quot; <span class=SpellE>href</span>=&quot;ScienceMuseum.htm&quot;
+<span class=SpellE>coords</span>=&quot;120<span class=GramE>,40,160,70</span>&quot;
+<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>onMouseOver</span></span>=&quot;<span
+class=SpellE>FunctionOver</span>('</span></tt><st1:place><st1:PlaceName><tt><span
+  style='font-size:10.0pt'>Science</span></tt></st1:PlaceName><tt><span
+ style='font-size:10.0pt'> </span></tt><st1:PlaceType><tt><span
+  style='font-size:10.0pt'>Museum</span></tt></st1:PlaceType></st1:place><tt><span
+style='font-size:10.0pt'>');&quot; <o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>onMouseOut</span></span>=&quot;<span
+class=SpellE>FunctionOver</span>(' a link');&quot;&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;area
+shape=&quot;<span class=SpellE>rect</span>&quot; <span class=SpellE>href</span>=&quot;Logan.htm&quot;
+<span class=SpellE>coords</span>=&quot;280<span class=GramE>,50,300,80</span>&quot;
+<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>onMouseOver</span></span>=&quot;<span
+class=SpellE>FunctionOver</span>('</span></tt><st1:place><st1:PlaceName><tt><span
+  style='font-size:10.0pt'>Logan</span></tt></st1:PlaceName><tt><span
+ style='font-size:10.0pt'> </span></tt><st1:PlaceType><tt><span
+  style='font-size:10.0pt'>Airport</span></tt></st1:PlaceType></st1:place><tt><span
+style='font-size:10.0pt'>');&quot; <o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>onMouseOut</span></span>=&quot;<span
+class=SpellE>FunctionOver</span>('a link');&quot;&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;/map&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;h1
+id=&quot;info&quot;&gt;Click somewhere<span class=GramE>.&lt;</span>/h1&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;a
+<span class=SpellE>href</span>=&quot;js1.htm#ex9&quot;&gt; Go Back &lt;/a&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;/body&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;/html&gt;<o:p></o:p></span></tt></p>
+
+<p>As you can see, each area on the <span class=SpellE>imagemap</span> has both
+an <span class=SpellE>onMouseOver</span> attribute and an <span class=SpellE>onMouseOut</span>
+attribute. </p>
+
+<p>The <span class=SpellE>onMouseOver</span> attribute calls a function called <span
+class=SpellE>FunctionOver</span>. This time, the function has a string
+argument. </p>
+
+<p>The function definition now has an argument. Notice that you do not have to
+indicate the argument's type! </p>
+
+<p>Also see how we can change the value of an &lt;h1&gt;. Can we do this with
+other elements?</p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p><span class=GramE>Your</span> AREA or A tags can also have <span
+class=SpellE>onclick</span> handlers. What happens here is that you first see
+the result of the <span class=SpellE>onclick</span> handler and then you go to
+the link. Look at the&nbsp;<a name=ex10></a><a href="ex10.htm">next example</a>:
+</p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;<span class=GramE>html</span>&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;<span class=GramE>head</span>&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>&lt;<span class=GramE>title&gt;</span>Example
+9&lt;/title&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;<span class=GramE>script</span>&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><span class=GramE><tt><span style='font-size:10.0pt'>function</span></tt></span><tt><span
+style='font-size:10.0pt'> <span class=SpellE>FunctionOver</span>(<span
+class=SpellE>myText</span>)<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>{ <o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>document.getElementById</span></span><span
+class=GramE>(</span>&quot;info&quot;).<span class=SpellE>innerHTML</span>=&quot;Click
+on &quot; + <span class=SpellE>myText</span> + &quot;!&quot;;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>}<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;/script&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;/head&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;<span class=GramE>body</span>&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;<span class=SpellE>img</span>
+SRC=&quot;<span class=SpellE>boston.gif</span>&quot; <span class=SpellE>usemap</span>=&quot;#</span></tt><st1:City><st1:place><span
+  class=SpellE><tt><span style='font-size:10.0pt'>boston</span></tt></span></st1:place></st1:City><tt><span
+style='font-size:10.0pt'>&quot; height=250 width=400&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;map name=&quot;</span></tt><st1:City><st1:place><span
+  class=SpellE><tt><span style='font-size:10.0pt'>boston</span></tt></span></st1:place></st1:City><tt><span
+style='font-size:10.0pt'>&quot;&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;area shape=&quot;<span
+class=SpellE>rect</span>&quot; <span class=SpellE>href</span>=&quot;BunkerHill.htm&quot;
+<span class=SpellE>coords</span>=&quot;160<span class=GramE>,0,200,30</span>&quot;
+<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>onMouseOver</span></span>=&quot;<span
+class=SpellE>FunctionOver</span>('</span></tt><st1:place><tt><span
+ style='font-size:10.0pt'>Bunker Hill</span></tt></st1:place><tt><span
+style='font-size:10.0pt'>');&quot; <o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>onMouseOut</span></span>=&quot;<span
+class=SpellE>FunctionOver</span>(' a link')&quot;;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>onClick</span></span>=&quot;alert('Ready
+to go to </span></tt><st1:place><tt><span style='font-size:10.0pt'>Bunker Hill</span></tt></st1:place><tt><span
+style='font-size:10.0pt'>?'); return true&quot;&gt; <o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;area shape=&quot;<span
+class=SpellE>rect</span>&quot; <span class=SpellE>href</span>=&quot;ScienceMuseum.htm&quot;
+<span class=SpellE>coords</span>=&quot;120<span class=GramE>,40,160,70</span>&quot;
+<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>onMouseOver</span></span>=&quot;<span
+class=SpellE>FunctionOver</span>('</span></tt><st1:place><st1:PlaceName><tt><span
+  style='font-size:10.0pt'>Science</span></tt></st1:PlaceName><tt><span
+ style='font-size:10.0pt'> </span></tt><st1:PlaceType><tt><span
+  style='font-size:10.0pt'>Museum</span></tt></st1:PlaceType></st1:place><tt><span
+style='font-size:10.0pt'>');&quot; <o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>onMouseOut</span></span>=&quot;<span
+class=SpellE>FunctionOver</span>(' a link');&quot;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>onClick</span></span>=&quot;alert('Ready
+to go to </span></tt><st1:place><st1:PlaceName><tt><span style='font-size:10.0pt'>Science</span></tt></st1:PlaceName><tt><span
+ style='font-size:10.0pt'> </span></tt><st1:PlaceType><tt><span
+  style='font-size:10.0pt'>Museum</span></tt></st1:PlaceType></st1:place><tt><span
+style='font-size:10.0pt'>?'); return true&quot;&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;area shape=&quot;<span
+class=SpellE>rect</span>&quot; <span class=SpellE>href</span>=&quot;Logan.htm&quot;
+<span class=SpellE>coords</span>=&quot;280<span class=GramE>,50,300,80</span>&quot;
+<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>onMouseOver</span></span>=&quot;<span
+class=SpellE>FunctionOver</span>('</span></tt><st1:place><st1:PlaceName><tt><span
+  style='font-size:10.0pt'>Logan</span></tt></st1:PlaceName><tt><span
+ style='font-size:10.0pt'> </span></tt><st1:PlaceType><tt><span
+  style='font-size:10.0pt'>Airport</span></tt></st1:PlaceType></st1:place><tt><span
+style='font-size:10.0pt'>');&quot; <o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>onMouseOut</span></span>=&quot;<span
+class=SpellE>FunctionOver</span>('a link');&quot;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>onClick</span></span>=&quot;alert('Ready
+to go to </span></tt><st1:place><st1:PlaceName><tt><span style='font-size:10.0pt'>Logan</span></tt></st1:PlaceName><tt><span
+ style='font-size:10.0pt'> </span></tt><st1:PlaceType><tt><span
+  style='font-size:10.0pt'>Airport</span></tt></st1:PlaceType></st1:place><tt><span
+style='font-size:10.0pt'>?'); return true&quot;&gt; <o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;/map&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;h1
+id=&quot;info&quot;&gt;Click somewhere<span class=GramE>.&lt;</span>/h1&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;a <span class=SpellE>href</span>=&quot;js1.htm#ex9&quot;&gt;
+Go Back &lt;/a&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;/body&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;/html&gt;</span></tt><o:p></o:p></p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>Since we now have two links to the &quot;Bunker Hill&quot; page (as well as
+to the other Boston area pages), it would be nice to be able to click a Back
+button on the Bunker <span class=GramE>Hill to always return to the page that
+we came from.</span> Let's look at the <a href="bunkerhill.htm">code for the
+Bunker Hill page</a>: </p>
+
+<p><tt><span style='font-size:10.0pt'>&lt;HTML&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;HEAD&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp; &lt;TITLE&gt;&lt;/TITLE&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;/HEAD&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;BODY <span class=SpellE>bgcolor</span> =
+&quot;FFFF00&quot;&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;CENTER&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;FONT SIZE=+2&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>Welcome to Bunker Hill!</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/FONT&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;form&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;input type=&quot;button&quot;
+value=&quot;Back to Boston&quot; <span class=SpellE>onclick</span>=&quot;<span
+class=SpellE><span class=GramE>history.go</span></span><span class=GramE>(</span>-1)&quot;&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;/form&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/CENTER&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/BODY&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/HTML&gt;</span></tt> </p>
+
+<p>The function <span class=SpellE>history.go</span> will take you to another
+page. The argument -1 means go back one page. You could have any integer
+argument, positive or negative. </p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>The last example doesn't introduce anything new. It's just a bit longer. It
+represents a&nbsp;<a name=madlib></a><a href="madlib.htm"><span class=SpellE>Madlib</span>
+game</a>. </p>
+
+<p><tt><span style='font-size:10.0pt'>&lt;html&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; &lt;title&gt;<span
+class=SpellE>Madlib</span> Page&lt;/title&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>function <span class=SpellE>Madlib</span>()</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; adverb1 = prompt(&quot;Type an
+adverb&quot;, &quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; pluralnoun1 = prompt(&quot;Type a
+plural noun&quot;, &quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; adjective1 = prompt(&quot;Type an
+adjective&quot;, &quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; pluralnoun2 = prompt(&quot;Type a
+plural noun&quot;, &quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; bodypart1 = prompt(&quot;Type a body
+part&quot;, &quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; animal1 = prompt(&quot;Type an
+animal&quot;, &quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; noun1 = prompt(&quot;Type a
+noun&quot;, &quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; number1 = prompt(&quot;Type a
+number&quot;, &quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; adjective2 = prompt(&quot;Type an
+adjective&quot;, &quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; verb1 = prompt(&quot;Type a verb
+(present tense)&quot;, &quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; bodypart2 = prompt(&quot;Type a body
+part&quot;, &quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; animal2 = prompt(&quot;Type an
+animal&quot;, &quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; location1 = prompt(&quot;Type a
+geographic location&quot;, &quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; food1 = prompt(&quot;Type a
+food&quot;, &quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; bodypart3 = prompt(&quot;Type a body
+part&quot;, &quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>document.writeln</span>(&quot;&lt;center&gt;
+Superstitions&lt;/center&gt;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>document.writeln</span>(&quot;&lt;p&gt;Although
+we believe ourselves to be &quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>document.writeln</span>(adverb1
++ &quot; civilized, most of us are really &quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>document.writeln</span>(pluralnoun1
++ &quot; at heart because we still believe &quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>document.writeln</span>(&quot;in
+&quot; + adjective1 + &quot; superstitions that began &quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>document.writeln</span>(&quot;while
+people still lived in &quot; + pluralnoun2 + &quot;.&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>document.writeln</span>(&quot;
+Some of these superstitions are:&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>document.writeln</span>(&quot;&lt;p&gt;1.
+If you spill salt, throw some over your &quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE><span class=GramE>document.writeln</span></span><span
+class=GramE>(</span>&quot;left &quot; + bodypart1 + &quot;.&quot;);</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>document.writeln</span>(&quot;&lt;<span
+class=SpellE>br</span>&gt;2. If a <span class=GramE>black &quot;</span> +
+animal1 + &quot; runs in front &quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>document.writeln</span>(&quot;of
+you, you are in trouble.&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>document.writeln</span>(&quot;&lt;<span
+class=SpellE>br</span>&gt;3. If you break a/<span class=GramE>an &quot;</span>
++ noun1 +&quot;,you will &quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>document.writeln</span>(&quot;have
+&quot; + number1 + &quot; years of &quot; + adjective2 + &quot; luck.&quot;);</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>document.writeln</span>(&quot;&lt;<span
+class=SpellE>br</span>&gt;4. <span class=GramE>Never &quot;</span> + verb1 +
+&quot; under a ladder.&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>document.writeln</span>(&quot;&lt;<span
+class=SpellE>br</span>&gt;5. If your &quot; + bodypart2 + <span class=GramE>&quot;
+itches</span>, it means &quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>document.writeln</span>(&quot;you
+will have a visitor.&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>document.writeln</span>(&quot;&lt;<span
+class=SpellE>br</span>&gt;6. If you hear a/<span class=GramE>an &quot;</span> +
+animal2 +&quot; howl at midnight&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>document.writeln</span>(&quot;,
+someone in your family will end up in &quot; + location1);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>document.writeln</span>(&quot;.&quot;);</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>document.writeln</span>(&quot;&lt;<span
+class=SpellE>br</span>&gt;7. If you want to keep vampires away, always wear
+&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE><span class=GramE>document.writeln</span></span><span
+class=GramE>(</span>&quot;a/an &quot; + food1 + &quot; on a string around your
+&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; <span class=SpellE>document.writeln</span>(bodypart3
++ &quot;.&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>}</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;script&gt;</span></tt> <br>
+<span class=SpellE><tt><span style='font-size:10.0pt'>Madlib</span></tt></span><tt><span
+style='font-size:10.0pt'>();</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>Do you like the above <span class=SpellE>madlib</span>?</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;a <span class=SpellE>href</span>=&quot;js1.htm#madlib&quot;&gt;
+Go Back &lt;/a&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/html&gt;</span></tt> </p>
+
+<p>Can we change this so that the game can be played many times by clicking a
+button?</p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

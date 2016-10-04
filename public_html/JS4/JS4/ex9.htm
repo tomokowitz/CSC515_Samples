@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>Example 9</title>
+</head>
+<script>
+var oldtime;
+var newtime;
+function getNiceTime(time)
+{
+	hour = time.getHours();
+	minutes = time.getMinutes();
+	seconds = time.getSeconds();
+	if (hour >= 13)
+	{
+		hour = hour - 12;
+		ampm = "PM";
+	}
+	else
+		ampm = "AM";
+	if (hour == 0)
+		hour = 12;
+	if (minutes < 10)
+	{
+		minutes = "0" + minutes;
+	}
+	if (seconds < 10)
+	{
+		seconds = "0" + seconds;
+	}
+	return hour + ":" +  minutes + ":" + seconds + ampm;
+}
+
+function startUp(first)
+{
+	oldtime = new Date();
+	newtime = oldtime;
+	first.value = getNiceTime(oldtime);
+}
+
+function handleClick(first, second, difference)
+{
+	oldtime = newtime;
+	newtime = new Date();
+	first.value = getNiceTime(oldtime);
+	second.value = getNiceTime(newtime);
+	// differencetime in milliseconds
+	differencetime = Date.parse(newtime) - Date.parse(oldtime);
+	difference.value = (differencetime / 1000) + " seconds";
+}
+</script>
+<body 
+onLoad="startUp(document.form1.first);">
+<form name="form1">
+Last Clicked:
+<input type=text name=first size=15>
+<br>New Click:
+<input type=text name=second size=15>
+<br>Difference: 
+<input type=text name=difference size=15>
+<br>
+<input type=button value="Click here" 
+       onClick="handleClick(first, second, difference);">
+</form>
+<p>
+<a href="js4.htm#ex9"> Go Back </a>
+</body>
+</html>

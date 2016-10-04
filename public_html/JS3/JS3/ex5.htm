@@ -1,0 +1,36 @@
+<html> 
+<head> 
+    <title>Example 5</title> 
+<script> 
+  function changePicture()
+  { 
+    if (document.form1.ape.value == "gorilla")
+    {
+      document.pic1.src="gorilla.jpg";
+    }
+    else if (document.form1.ape.value == "chimp")
+    {
+      document.pic1.src="chimp.jpg";
+    }
+    else 
+    {
+      document.pic1.src="orangutang.jpg";
+    }
+  }
+</script> 
+</head> 
+<body> 
+<p> 
+Pick your ape!
+<form name="form1">
+  <select name="ape" onChange="changePicture()">
+    <option value="chimp" checked>Chimp</option>
+    <option value="gorilla">Gorilla</option>
+    <option value="orangutang">Orangutang</option>
+  </select>
+</form>
+<img src="chimp.jpg" name="pic1"> 
+<P>
+<a href="js3.htm#ex5"> Go Back </a> 
+</body> 
+</html> 

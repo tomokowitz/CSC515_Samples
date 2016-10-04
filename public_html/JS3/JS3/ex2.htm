@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Example 2</title>
+<script>
+	function max(a, b, box)
+	{
+		if (a > b)
+			box.value = "First number is bigger";
+		else if (a < b)
+			box.value = "Second number is bigger";
+		else
+			box.value = "Equality";
+	}
+</script>
+</head>
+<body>
+<form>
+Number 1 <input type="text" name="num1">
+<br> Number 2 <input type="text" name="num2">
+<br> <input type="button" value="Get Larger" onClick="max(parseFloat(num1.value), parseFloat(num2.value), text1);">
+<input type=text size=40 name=text1>
+</form>
+<p>
+<a href="js3.htm#ex2"> Go Back </a>
+</body>
+</html>

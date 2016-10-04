@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Example 7</title>
+</head>
+<script>
+	function average(a, b, c)
+	{
+		var answer = (parseInt(a) + parseInt(b) + parseInt(c)) / 3;
+		return answer;
+	}
+</script>
+<body>
+<center> Calculating average</center>
+<p>
+<form>
+	Enter number 1: <input type=text name=num1 size=6>
+	<br> Enter number 2: <input type=text name=num2 size=6>
+	<br> Enter number 3: <input type=text name=num3 size=6>
+	<br> Average is: <input type=text name=answer size=6>
+	<p>
+	<input type=button value="Get Average" onClick="answer.value=average(num1.value, num2.value, num3.value);">
+</form>
+<p>
+<a href="js2.htm#ex9"> Go Back </a>
+</body>
+</html>

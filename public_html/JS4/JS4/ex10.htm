@@ -1,0 +1,28 @@
+﻿<html>
+<head>
+    <title>Clock</title>
+</head>
+<script src=nicetime.js>
+</script>
+<script>
+var id;
+function startUp()
+{
+	document.form1.current.value = getNiceTime(new Date());
+	id = setTimeout("startUp(document.form1.current.value)",1000);
+}
+function stopIt()
+{
+    clearTimeout(id);
+}
+</script>
+<body 
+onLoad="startUp();">
+<form name="form1">
+Current Time:
+<input type=text name=current size=15>
+<input type=button value="Stop" 
+       onClick="stopIt();">
+</form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿<html>
+<head>
+    <title>Example 7</title>
+</head>
+<body>
+<script>
+    	day1 = new Date();
+	document.writeln("Current time is: ");
+	hour = day1.getHours();
+	minutes = day1.getMinutes();
+	seconds = day1.getSeconds();
+	if (hour >= 13)
+	{
+		hour = hour - 12;
+		ampm = "PM";
+	}
+	else
+		ampm = "AM";
+	if (hour == 0)
+		hour = 12;
+	document.writeln(hour + ":" +  minutes + ":" + seconds + ampm);
+	month = day1.getMonth() + 1;
+	day = day1.getDate();
+	year = day1.getYear();
+	document.writeln("<BR> Today is: " + month + "/" + day + "/" + year);
+</script>
+<p>
+<a href="js4.htm#ex7"> Go Back </a>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>anchors.htm</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {color: #000000; background-color: #ffffff; font-family: Monospaced}
+pre {color: #000000; background-color: #ffffff; font-family: Monospaced}
+table {color: #000000; background-color: #e9e8e2; font-family: Monospaced}
+.argument {color: #009900}
+.ST0 {color: #0000e6; background-color: #e9eff8}
+.tag {color: #0000e6}
+.value {color: #ce7b00}
+-->
+</style>
+</head>
+<body>
+<table width="100%"><tr><td align="center">C:\Users\tomokowitz\Documents\School\CSR\CSC515\HTML2\anchors.htm</td></tr></table>
+<pre>
+  1 <span class="ST0">&lt;</span><span class="ST0">html</span><span class="ST0">&gt;</span>
+  2 <span class="tag">&lt;</span><span class="tag">head</span> <span class="tag">&gt;</span>
+  3 <span class="tag">&lt;</span><span class="tag">title</span><span class="tag">&gt;</span>
+  4 Long Page
+  5 <span class="tag">&lt;/</span><span class="tag">title</span><span class="tag">&gt;</span>
+  6 <span class="tag">&lt;/</span><span class="tag">head</span><span class="tag">&gt;</span>
+  7 <span class="tag">&lt;</span><span class="tag">body</span><span class="tag">&gt;</span>
+  8 <span class="tag">&lt;</span><span class="tag">font</span> <span class="argument">size</span><span class="argument">=</span><span class="value">&quot;+2&quot;</span><span class="tag">&gt;</span>
+  9 <span class="tag">&lt;</span><span class="tag">p</span> <span class="argument">align</span><span class="argument">=</span><span class="value">&quot;center&quot;</span><span class="tag">&gt;</span>
+ 10 Pet Information
+ 11 <span class="tag">&lt;/</span><span class="tag">p</span><span class="tag">&gt;</span>
+ 12 <span class="tag">&lt;</span><span class="tag">P</span><span class="tag">&gt;</span>
+ 13 <span class="tag">&lt;</span><span class="tag">a</span> <span class="argument">href</span><span class="argument">=</span><span class="value">&quot;#cat&quot;</span><span class="tag">&gt;</span>Cats<span class="tag">&lt;/</span><span class="tag">a</span><span class="tag">&gt;</span>
+ 14 <span class="tag">&lt;</span><span class="tag">br</span><span class="tag">&gt;</span><span class="tag">&lt;</span><span class="tag">a</span> <span class="argument">href</span><span class="argument">=</span><span class="value">&quot;#dog&quot;</span><span class="tag">&gt;</span>Dogs<span class="tag">&lt;/</span><span class="tag">a</span><span class="tag">&gt;</span>
+ 15 <span class="tag">&lt;</span><span class="tag">br</span><span class="tag">&gt;</span><span class="tag">&lt;</span><span class="tag">a</span> <span class="argument">href</span><span class="argument">=</span><span class="value">&quot;#hamster&quot;</span><span class="tag">&gt;</span>Hamsters<span class="tag">&lt;/</span><span class="tag">a</span><span class="tag">&gt;</span>
+ 16 <span class="tag">&lt;</span><span class="tag">br</span><span class="tag">&gt;</span><span class="tag">&lt;</span><span class="tag">a</span> <span class="argument">href</span><span class="argument">=</span><span class="value">&quot;#fish&quot;</span><span class="tag">&gt;</span>Fish<span class="tag">&lt;/</span><span class="tag">a</span><span class="tag">&gt;</span>
+ 17 <span class="tag">&lt;</span><span class="tag">br</span><span class="tag">&gt;</span><span class="tag">&lt;</span><span class="tag">a</span> <span class="argument">href</span><span class="argument">=</span><span class="value">&quot;#snake&quot;</span><span class="tag">&gt;</span>Snakes<span class="tag">&lt;/</span><span class="tag">a</span><span class="tag">&gt;</span>
+ 18 <span class="tag">&lt;</span><span class="tag">p</span><span class="tag">&gt;</span>
+ 19 <span class="tag">&lt;</span><span class="tag">a</span> <span class="argument">name</span><span class="argument">=</span><span class="value">&quot;cat&quot;</span><span class="tag">&gt;</span>Information about cats.<span class="tag">&lt;/</span><span class="tag">a</span><span class="tag">&gt;</span>
+ 20 <span class="tag">&lt;</span><span class="tag">p</span><span class="tag">&gt;</span>
+ 21  
+ 22 Cats like to eat this bird.
+ 23 Information about this kind of animal.
+ 24 Information about this kind of animal.
+ 25 Information about this kind of animal.
+ 26 Information about this kind of animal.
+ 27 Information about this kind of animal.
+ 28 Information about this kind of animal.
+ 29 Information about this kind of animal.
+ 30 Information about this kind of animal.
+ 31 <span class="tag">&lt;</span><span class="tag">p</span><span class="tag">&gt;</span>
+ 32 Information about this kind of animal.
+ 33 Information about this kind of animal.
+ 34 Information about this kind of animal.
+ 35 Information about this kind of animal.
+ 36 Information about this kind of animal.
+ 37 Information about this kind of animal.
+ 38 Information about this kind of animal.
+ 39 Information about this kind of animal.
+ 40 <span class="tag">&lt;</span><span class="tag">p</span><span class="tag">&gt;</span>
+ 41 <span class="tag">&lt;</span><span class="tag">a</span> <span class="argument">name</span><span class="argument">=</span><span class="value">&quot;dog&quot;</span><span class="tag">&gt;</span>Information about dogs.<span class="tag">&lt;/</span><span class="tag">a</span><span class="tag">&gt;</span>
+ 42 <span class="tag">&lt;</span><span class="tag">p</span><span class="tag">&gt;</span>
+ 43 Information about this kind of animal.
+ 44 Information about this kind of animal.
+ 45 Information about this kind of animal.
+ 46 Information about this kind of animal.
+ 47 Information about this kind of animal.
+ 48 Information about this kind of animal.
+ 49 Information about this kind of animal.
+ 50 Information about this kind of animal.
+ 51 <span class="tag">&lt;</span><span class="tag">p</span><span class="tag">&gt;</span>
+ 52 Information about this kind of animal.
+ 53 Information about this kind of animal.
+ 54 Information about this kind of animal.
+ 55 Information about this kind of animal.
+ 56 Information about this kind of animal.
+ 57 Information about this kind of animal.
+ 58 Information about this kind of animal.
+ 59 Information about this kind of animal.
+ 60 <span class="tag">&lt;</span><span class="tag">p</span><span class="tag">&gt;</span>
+ 61 <span class="tag">&lt;</span><span class="tag">a</span> <span class="argument">name</span><span class="argument">=</span><span class="value">&quot;hamster&quot;</span><span class="tag">&gt;</span>Information about hamsters.<span class="tag">&lt;/</span><span class="tag">a</span><span class="tag">&gt;</span>
+ 62 <span class="tag">&lt;</span><span class="tag">p</span><span class="tag">&gt;</span>
+ 63 Information about this kind of animal.
+ 64 Information about this kind of animal.
+ 65 Information about this kind of animal.
+ 66 Information about this kind of animal.
+ 67 Information about this kind of animal.
+ 68 Information about this kind of animal.
+ 69 Information about this kind of animal.
+ 70 Information about this kind of animal.
+ 71 <span class="tag">&lt;</span><span class="tag">p</span><span class="tag">&gt;</span>
+ 72 Information about this kind of animal.
+ 73 Information about this kind of animal.
+ 74 Information about this kind of animal.
+ 75 Information about this kind of animal.
+ 76 Information about this kind of animal.
+ 77 Information about this kind of animal.
+ 78 Information about this kind of animal.
+ 79 Information about this kind of animal.
+ 80 <span class="tag">&lt;</span><span class="tag">p</span><span class="tag">&gt;</span>
+ 81 <span class="tag">&lt;</span><span class="tag">a</span> <span class="argument">name</span><span class="argument">=</span><span class="value">&quot;fish&quot;</span><span class="tag">&gt;</span><span class="tag">&lt;/</span><span class="tag">a</span><span class="tag">&gt;</span>Information about fish.
+ 82 <span class="tag">&lt;</span><span class="tag">p</span><span class="tag">&gt;</span>
+ 83 Information about this kind of animal.
+ 84 Information about this kind of animal.
+ 85 Information about this kind of animal.
+ 86 Information about this kind of animal.
+ 87 Information about this kind of animal.
+ 88 Information about this kind of animal.
+ 89 Information about this kind of animal.
+ 90 Information about this kind of animal.
+ 91 <span class="tag">&lt;</span><span class="tag">p</span><span class="tag">&gt;</span>
+ 92 Information about this kind of animal.
+ 93 Information about this kind of animal.
+ 94 Information about this kind of animal.
+ 95 Information about this kind of animal.
+ 96 Information about this kind of animal.
+ 97 Information about this kind of animal.
+ 98 Information about this kind of animal.
+ 99 Information about this kind of animal.
+100 <span class="tag">&lt;</span><span class="tag">p</span><span class="tag">&gt;</span>
+101 <span class="tag">&lt;</span><span class="tag">a</span> <span class="argument">name</span><span class="argument">=</span><span class="value">&quot;snake&quot;</span><span class="tag">&gt;</span>Information about snakes.<span class="tag">&lt;/</span><span class="tag">a</span><span class="tag">&gt;</span>
+102 <span class="tag">&lt;</span><span class="tag">p</span><span class="tag">&gt;</span>
+103 Information about this kind of animal.
+104 Information about this kind of animal.
+105 Information about this kind of animal.
+106 Information about this kind of animal.
+107 Information about this kind of animal.
+108 Information about this kind of animal.
+109 Information about this kind of animal.
+110 Information about this kind of animal.
+111 <span class="tag">&lt;</span><span class="tag">p</span><span class="tag">&gt;</span>
+112 Information about this kind of animal.
+113 Information about this kind of animal.
+114 Information about this kind of animal.
+115 Information about this kind of animal.
+116 Information about this kind of animal.
+117 Information about this kind of animal.
+118 Information about this kind of animal.
+119 Information about this kind of animal.
+120 <span class="tag">&lt;/</span><span class="tag">font</span><span class="tag">&gt;</span>
+121 <span class="tag">&lt;/</span><span class="tag">body</span><span class="tag">&gt;</span>
+</pre></body>
+</html>

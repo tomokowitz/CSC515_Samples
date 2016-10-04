@@ -1,0 +1,26 @@
+﻿<html>
+<head>
+    <title>Example 11</title>
+</head>
+<script>
+pictures = new Array(3); // elements 0..2
+var index = 0;
+pictures[0] = "flower1.gif";
+pictures[1] = "flower2.gif";
+pictures[2] = "flower3.gif";
+
+function animate()
+{
+  document.pic1.src=pictures[index % 3];
+  index++;
+  setTimeout("animate()", 1000);
+}
+</script>
+</head>
+<body onload="animate();">
+<center>
+<img SRC="flower1.gif" NAME="pic1" height=80 width=78> 
+<p>
+<a href="js4.htm#ex11"> Go Back </a>
+</body>
+</html>

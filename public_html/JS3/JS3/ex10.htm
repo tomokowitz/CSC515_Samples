@@ -1,0 +1,57 @@
+<html>
+<head>
+<title> Craps </title>
+<script>
+function playcraps(field)
+{
+  var bet=prompt("How much this time?","1");
+  var firstroll1 = Math.ceil(Math.random()*6);
+  var firstroll2 = Math.ceil(Math.random()*6);
+  var firstsum = firstroll1 + firstroll2;
+  alert("You rolled " + firstsum);
+  switch(firstsum)
+  {
+  case 7: case 11:
+    alert("You win!");
+    field.value = parseInt(field.value) + parseInt(bet);
+    break;
+  case 2: case 3: case 12:
+    alert("You lose!");
+    field.value = parseInt(field.value) - parseInt(bet);
+    break;
+  default:
+    do {
+      alert("You gotta keep rolling!");
+      var secondroll1 = Math.ceil(Math.random()*6);
+      var secondroll2 = Math.ceil(Math.random()*6);
+      var secondsum = secondroll1 + secondroll2;
+      alert("You rolled " + secondsum);
+    } while (secondsum != firstsum && secondsum != 7);
+    if (secondsum == firstsum)
+    {
+      alert("You win!");
+      field.value = parseInt(field.value) + parseInt(bet);
+    }
+    else 
+    {
+      alert("You lose!");
+      field.value = parseInt(field.value) - parseInt(bet);
+    }  
+  }      
+}
+</script>
+</head>
+<body>
+<center>
+<font size=5>Craps</font>
+</center>
+Click the Button to Shoot Those Dice!
+<p>
+<form>
+Winnings: 
+<input type=text name="winnings" value="0">
+<p>
+<input type=button value="Play Game"
+ onClick="playcraps(winnings);">
+</form>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Example 9</title>
+<script>
+function FunctionOver(myText)
+{ 
+  document.getElementById("info").innerHTML="Click on " + myText + "!";
+}
+</script>
+</head>
+<body>
+<img SRC="boston.gif" usemap="#boston" height=250 width=400>
+<map name="boston">
+<area shape="rect" href="BunkerHill.htm" coords="160,0,200,30" 
+      onMouseOver="FunctionOver('Bunker Hill');" 
+      onMouseOut="FunctionOver(' a link')";
+      onClick="alert('Ready to go to Bunker Hill?'); return true"> 
+<area shape="rect" href="ScienceMuseum.htm" coords="120,40,160,70" 
+      onMouseOver="FunctionOver('Science Museum');" 
+      onMouseOut="FunctionOver(' a link');"
+      onClick="alert('Ready to go to Science Museum?'); return true">
+<area shape="rect" href="Logan.htm" coords="280,50,300,80" 
+      onMouseOver="FunctionOver('Logan Airport');" 
+      onMouseOut="FunctionOver('a link');"
+      onClick="alert('Ready to go to Logan Airport?'); return true"> 
+</map>
+<h1 id="info">Click somewhere.</h1>
+<a href="js1.htm#ex9"> Go Back </a>
+</body>
+</html>

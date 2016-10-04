@@ -1,0 +1,1058 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="John Avitabile">
+   <meta name="GENERATOR" content="Mozilla/4.73 [en] (Win98; U) [Netscape]">
+   <title>JavaScript Control Structures</title>
+<script>
+function openClock()
+{
+	window.open("ex10.htm","clock","status,width=200,height=30");
+}
+</script>
+</head>
+<body>
+
+<center><font size=+1>JavaScript Objects and Functions</font></center>
+
+<p>We've already seen quite a bit about functions.
+<p>It's best to write your functions within the HEAD container.
+<p>We've seen that functions can have return values.
+<p>We've seen that you can pass values as arguments to functions.
+<p>If you pass a variable to a function, it's passed by value.
+<p>Look at the<a NAME="ex1"></a><a href="ex1.htm"> following example</a>:
+<p><tt>&lt;html></tt>
+<br><tt>&lt;head></tt>
+<br><tt>&nbsp;&nbsp;&nbsp; &lt;title>Example 1&lt;/title></tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;function changetwo(a, b)</tt>
+<br><tt>&nbsp;{</tt>
+<br><tt>&nbsp; a = "hello";</tt>
+<br><tt>&nbsp; b = "goodbye";</tt>
+<br><tt>&nbsp; alert("Function variables store " + a + " and " + b);</tt>
+<br><tt>&nbsp;}</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;body></tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;var c = "when"</tt>
+<br><tt>&nbsp;var d = "now"</tt>
+<br><tt>&nbsp;alert("Script variables store " + c + " and " + d);</tt>
+<br><tt>&nbsp;changetwo(c, d);</tt>
+<br><tt>&nbsp;alert("Script variables store " + c + " and " + d);</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;a href="js4.htm#ex1"> Go Back &lt;/a></tt>
+<br><tt>&lt;/body></tt>
+<br><tt>&lt;/html></tt>
+<p>
+<hr WIDTH="100%">
+<p>But the attributes of an object that is passed as an argument can be
+changed by a function. This is consistent with other object-oriented languages
+like C++ and Java. Look at the&nbsp;<a NAME="ex2"></a><a href="ex2.htm">next
+example</a>.
+<p><tt>&lt;html></tt>
+<br><tt>&lt;head></tt>
+<br><tt>&nbsp;&nbsp;&nbsp; &lt;title>Example 1&lt;/title></tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;function changetwo(a, b)</tt>
+<br><tt>&nbsp;{</tt>
+<br><tt>&nbsp; a.value = "hello";</tt>
+<br><tt>&nbsp; b.value = "goodbye";</tt>
+<br><tt>&nbsp;}</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;body></tt>
+<br><tt>&lt;form></tt>
+<br><tt>Message 1 &lt;input type=text name=text1 value="Now" size=10></tt>
+<br><tt>&lt;br> Message 2 &lt;input type=text name=text2 value="Then" size=10></tt>
+<br><tt>&lt;br> &lt;input type=button value="Click here"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+onClick="changetwo(text1,text2);"></tt>
+<br><tt>&lt;/form></tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;a href="js4.htm#ex2"> Go Back &lt;/a></tt>
+<br><tt>&lt;/body></tt>
+<br><tt>&lt;/html></tt>
+<p>
+<hr WIDTH="100%">
+<p>However, if you pass an attribute of an object to a function, it's passed
+by value (doesn't change), as in the&nbsp;<a NAME="ex3"></a><a href="ex3.htm">next
+example</a>:
+<br>&nbsp;
+<p><tt>&lt;html></tt>
+<br><tt>&lt;head></tt>
+<br><tt>&nbsp;&nbsp;&nbsp; &lt;title>Example 1&lt;/title></tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;function changetwo(a, b)</tt>
+<br><tt>&nbsp;{</tt>
+<br><tt>&nbsp; a = "hello";</tt>
+<br><tt>&nbsp; b = "goodbye";</tt>
+<br><tt>&nbsp; alert("Function variables store " + a + " and " + b);</tt>
+<br><tt>&nbsp;}</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;body></tt>
+<br><tt>&lt;form></tt>
+<br><tt>Message 1 &lt;input type=text name=text1 value="Now" size=10></tt>
+<br><tt>&lt;br> Message 2 &lt;input type=text name=text2 value="Then" size=10></tt>
+<br><tt>&lt;br> &lt;input type=button value="Click here"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+onClick="changetwo(text1.value,text2.value);"></tt>
+<br><tt>&lt;/form></tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;a href="js4.htm#ex2"> Go Back &lt;/a></tt>
+<br><tt>&lt;/body></tt>
+<br><tt>&lt;/html></tt>
+<p>
+<hr WIDTH="100%">
+<center>
+<p><font size=+1>Available Functions</font></center>
+
+<p>Functions in JavaScript are attached to an Object. Constants are also
+attached to Objects.
+<p>For example, there is a Math object in JavaScript. The Math object includes
+the following constants:
+<br>&nbsp;
+<table>
+<tr>
+<td>E</td>
+
+<td>The constant e</td>
+</tr>
+
+<tr>
+<td>LN10</td>
+
+<td>Natural logarithm of 10</td>
+</tr>
+
+<tr>
+<td>LN2</td>
+
+<td>Natural logarithm of 2</td>
+</tr>
+
+<tr>
+<td>LOG10E</td>
+
+<td>Base 10 logarithm of e</td>
+</tr>
+
+<tr>
+<td>LOG2E</td>
+
+<td>Base 2 logarithm of e</td>
+</tr>
+
+<tr>
+<td>PI</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>SQRT1_2</td>
+
+<td>1 divided by the square root of 2</td>
+</tr>
+
+<tr>
+<td>SQRT2</td>
+
+<td>square root of 2</td>
+</tr>
+</table>
+
+<p>The functions of the Math object are:
+<br>&nbsp;
+<br>&nbsp;
+<table>
+<tr>
+<td>abs(x)</td>
+
+<td>returns absolute value of x</td>
+</tr>
+
+<tr>
+<td>acos(x)</td>
+
+<td>returns arc cosine, in radians, of x (a number between -1 and 1)</td>
+</tr>
+
+<tr>
+<td>asin(x)</td>
+
+<td>returns arc sine, in radians, of x (a number between -1 and 1)</td>
+</tr>
+
+<tr>
+<td>atan(x)</td>
+
+<td>returns arc tangent, in radians, of x</td>
+</tr>
+
+<tr>
+<td>atan2(x)</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>ceil(x)</td>
+
+<td>returns x rounded up to nearest integer</td>
+</tr>
+
+<tr>
+<td>cos(x)</td>
+
+<td>returns the cosine of x (a number in radians)</td>
+</tr>
+
+<tr>
+<td>exp(x)</td>
+
+<td>returns e<sup>x</sup></td>
+</tr>
+
+<tr>
+<td>floor(x)</td>
+
+<td>returns x rounded down to nearest integer</td>
+</tr>
+
+<tr>
+<td>log(x)</td>
+
+<td>returns natural logarithm of x</td>
+</tr>
+
+<tr>
+<td>max(a,b)</td>
+
+<td>returns the larger of a and b</td>
+</tr>
+
+<tr>
+<td>min(a,b)</td>
+
+<td>returns the smaller of a and b</td>
+</tr>
+
+<tr>
+<td>pow(x,y)</td>
+
+<td>returns x<sup>y</sup></td>
+</tr>
+
+<tr>
+<td>random()</td>
+
+<td>returns a number between 0.0 and 1.1</td>
+</tr>
+
+<tr>
+<td>round(x)</td>
+
+<td>returns x rounded to nearest integer</td>
+</tr>
+
+<tr>
+<td>sin(x)</td>
+
+<td>returns the sine of x (a number in radians)</td>
+</tr>
+
+<tr>
+<td>sqrt(x)</td>
+
+<td>returns the square root of x</td>
+</tr>
+
+<tr>
+<td>tan(x)</td>
+
+<td>returns the sine of x (a number in radians)</td>
+</tr>
+</table>
+
+<p>You would always preface one of these functions with the name of the
+object, Math. Consider the&nbsp;<a NAME="ex4"></a><a href="ex4.htm">following
+example</a>:
+<p><tt>&lt;html></tt>
+<br><tt>&lt;head></tt>
+<br><tt>&nbsp;&nbsp;&nbsp; &lt;title>Example 4&lt;/title></tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;function getArea(r)</tt>
+<br><tt>&nbsp;{</tt>
+<br><tt>&nbsp; return Math.PI * Math.pow(r,2);</tt>
+<br><tt>&nbsp;}</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;body></tt>
+<br><tt>&lt;form></tt>
+<br><tt>Radius of Circle &lt;input type=text name=radius size=3></tt>
+<br><tt>&lt;br> Area of Circle &lt;input type=text name=area size=10></tt>
+<br><tt>&lt;br> &lt;input type=button value="Find area of circle"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+onClick="area.value=getArea(radius.value);"></tt>
+<br><tt>&lt;/form></tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;a href="js4.htm#ex4"> Go Back &lt;/a></tt>
+<br><tt>&lt;/body></tt>
+<br><tt>&lt;/html></tt>
+<p>By the way, the program above would not have worked if the function
+was named area instead of getArea. The reason is that a function cannot
+have the same name as an object.
+<p>
+<hr WIDTH="100%">
+<p>Another useful object, with its set of functions, is the Date() object.
+Unlike the functions of the Math object, most Date functions must be attached
+to an actual Date, not just the word Date.
+<p>In order to create a Date, you use the new operator:
+<p>&nbsp;&nbsp;&nbsp; <tt>TodaysDate = new Date()</tt>
+<p>This will create a Date object named TodaysDate, and assign it the value
+of the current system time. Look at the<a NAME="ex5"></a><a href="ex5.htm">next
+example</a>:
+<p><tt>&lt;html></tt>
+<br><tt>&lt;head></tt>
+<br><tt>&nbsp;&nbsp;&nbsp; &lt;title>Example 5&lt;/title></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;body></tt>
+<br><tt>Today is:</tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;todaysDate = new Date();</tt>
+<br><tt>&nbsp;document.writeln(todaysDate);</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;a href="js4.htm#ex5"> Go Back &lt;/a></tt>
+<br><tt>&lt;/body></tt>
+<br><tt>&lt;/html></tt>
+<p>
+<hr WIDTH="100%">
+<p>The Date() function (called a <b>constructor function</b> because it
+constructs a new Date object) can have arguments also.
+<p>The format of the arguments are:
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <tt>Date("month, day, year
+hours:minutes:seconds");</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; Date(year, month, day);</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; Date(year, month, day, hours, minutes, seconds);</tt>
+<p>Look at the<a NAME="ex6"></a> <a href="ex6.htm">next example</a>:
+<p><tt>&lt;html></tt>
+<br><tt>&lt;head></tt>
+<br><tt>&nbsp;&nbsp;&nbsp; &lt;title>Example 6&lt;/title></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;body></tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp; day1 = new Date("apr, 1, 2000 6:30:15");</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp; day2 = new Date(2000, 10, 31);</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp; day3 = new Date(2000, 7, 4, 10, 30, 15);</tt>
+<br><tt>&nbsp;document.writeln("Day 1 is " + day1 + "&lt;br>");</tt>
+<br><tt>&nbsp;document.writeln("Day 2 is " + day2 + "&lt;br>");</tt>
+<br><tt>&nbsp;document.writeln("Day 3 is " + day3 + "&lt;br>");</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;a href="js4.htm#ex6"> Go Back &lt;/a></tt>
+<br><tt>&lt;/body></tt>
+<br><tt>&lt;/html></tt>
+<p>Notice that since the value of the month field goes from 0 (January)
+to 11 (December), we don't get what we might expect!
+<p>
+<hr WIDTH="100%">
+<p>These are the functions of the Date object:
+<br>&nbsp;
+<table>
+<tr VALIGN=TOP>
+<td>getDate()</td>
+
+<td>Returns the day of the month.</td>
+</tr>
+
+<tr>
+<td>getDay()</td>
+
+<td>Returns the day of the week.</td>
+</tr>
+
+<tr>
+<td>getHours()</td>
+
+<td>Returns the hour. A value between 0 and 23.</td>
+</tr>
+
+<tr>
+<td>getMinutes()</td>
+
+<td>Returns the minutes.</td>
+</tr>
+
+<tr>
+<td>getMonth()</td>
+
+<td>Returns the month. A value between 0 and 11.</td>
+</tr>
+
+<tr>
+<td>getSeconds()</td>
+
+<td>Returns the seconds.</td>
+</tr>
+
+<tr VALIGN=TOP>
+<td>getTime()</td>
+
+<td>Returns the number of milliseconds between midnight (GMT) on 1/1/1970
+and the time stored in this object.</td>
+</tr>
+
+<tr VALIGN=TOP>
+<td>getTimeZoneOffset()</td>
+
+<td>Returns the number of minutes difference between the GMT and the local
+time zone.</td>
+</tr>
+
+<tr VALIGN=TOP>
+<td>getYear()</td>
+
+<td>Returns the year in Internet Explorer. Returns the year minus 1900
+in Netscape. Be careful.</td>
+</tr>
+
+<tr VALIGN=TOP>
+<td>parse(date)</td>
+
+<td>Returns the number of milliseconds between the argument and midnight
+(GMT) on 1/1/1970. Invoked with Date rather than with a Date object.</td>
+</tr>
+
+<tr>
+<td>setDate(number)</td>
+
+<td>Number is between 1 and 31.</td>
+</tr>
+
+<tr>
+<td>setHours(number)</td>
+
+<td>Number is between 0 and 23.</td>
+</tr>
+
+<tr>
+<td>setMinutes(number)</td>
+
+<td>Number is between 0 and 59.</td>
+</tr>
+
+<tr>
+<td>setMonth(number).</td>
+
+<td>Number is between 0 and 11.</td>
+</tr>
+
+<tr>
+<td>setSeconds(number)</td>
+
+<td>Number is between 0 and 59.</td>
+</tr>
+
+<tr>
+<td>setTime(number)</td>
+
+<td>Number is the milliseconds since midnight (GMT) on 1/1/1970.</td>
+</tr>
+
+<tr>
+<td>setYear(number)</td>
+
+<td>Nunber is a four digit number.</td>
+</tr>
+
+<tr>
+<td>toGMTString()</td>
+
+<td>Returns a string representation using the GMT time zone.</td>
+</tr>
+
+<tr>
+<td>toLocaleString()</td>
+
+<td>Returns a string representation in the local time zone.&nbsp;</td>
+</tr>
+
+<tr>
+<td>UTC(year, month, day [, hours [, minutes [, seconds]]])</td>
+
+<td>Invoked with Date. Returns the number of milliseconds between midnight
+(GMT) on 1/1/1970 and the time specified.</td>
+</tr>
+</table>
+
+<p>Look at<a NAME="ex7"></a> <a href="ex7.htm">this example</a>:
+<p><tt>&lt;html></tt>
+<br><tt>&lt;head></tt>
+<br><tt>&nbsp;&nbsp;&nbsp; &lt;title>Example 7&lt;/title></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;body></tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp; day1 = new Date();</tt>
+<br><tt>&nbsp;document.writeln("Current time is: ");</tt>
+<br><tt>&nbsp;hour = day1.getHours();</tt>
+<br><tt>&nbsp;minutes = day1.getMinutes();</tt>
+<br><tt>&nbsp;seconds = day1.getSeconds();</tt>
+<br><tt>&nbsp;if (hour >= 13)</tt>
+<br><tt>&nbsp;{</tt>
+<br><tt>&nbsp; hour = hour - 12;</tt>
+<br><tt>&nbsp; ampm = "PM";</tt>
+<br><tt>&nbsp;}</tt>
+<br><tt>&nbsp;else</tt>
+<br><tt>&nbsp; ampm = "AM";</tt>
+<br><tt>&nbsp;if (hour == 0)</tt>
+<br><tt>&nbsp; hour = 12;</tt>
+<br><tt>&nbsp;document.writeln(hour + ":" +&nbsp; minutes + ":" + seconds
++ ampm);</tt>
+<br><tt>&nbsp;month = day1.getMonth();</tt>
+<br><tt>&nbsp;day = day1.getDate();</tt>
+<br><tt>&nbsp;year = day1.getYear();</tt>
+<br><tt>&nbsp;document.writeln("&lt;BR> Today is: " + month + "/" + day
++ "/" + year);</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;a href="js4.htm#ex7"> Go Back &lt;/a></tt>
+<br><tt>&lt;/body></tt>
+<br><tt>&lt;/html></tt>
+<p>
+<hr WIDTH="100%">
+<p>You might notice that the year looks different in Internet Explorer
+and Netscape!
+<p>There is a Navigator object in JavaScript that can give you information
+about which browser is being used.
+<p>There can be only one instance of the Navigator object. You reference
+it through the navigator property of a window object, or just as navigator
+(meaning the current window).
+<p>Let's re-look at the&nbsp;<a NAME="ex8"></a><a href="ex8.htm">last example</a>:
+<p><tt>&lt;html></tt>
+<br><tt>&lt;head></tt>
+<br><tt>&nbsp;&nbsp;&nbsp; &lt;title>Example 8&lt;/title></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;body></tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;document.writeln("You are using " + navigator.appName);</tt>
+<br><tt>&nbsp;document.writeln(" Version " + navigator.appVersion + "&lt;P>");</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp; day1 = new Date();</tt>
+<br><tt>&nbsp;document.writeln("Current time is: ");</tt>
+<br><tt>&nbsp;hour = day1.getHours();</tt>
+<br><tt>&nbsp;minutes = day1.getMinutes();</tt>
+<br><tt>&nbsp;seconds = day1.getSeconds();</tt>
+<br><tt>&nbsp;if (hour >= 13)</tt>
+<br><tt>&nbsp;{</tt>
+<br><tt>&nbsp; hour = hour - 12;</tt>
+<br><tt>&nbsp; ampm = "PM";</tt>
+<br><tt>&nbsp;}</tt>
+<br><tt>&nbsp;else</tt>
+<br><tt>&nbsp; ampm = "AM";</tt>
+<br><tt>&nbsp;if (hour == 0)</tt>
+<br><tt>&nbsp; hour = 12;</tt>
+<br><tt>&nbsp;document.writeln(hour + ":" +&nbsp; minutes + ":" + seconds
++ ampm);</tt>
+<br><tt>&nbsp;month = day1.getMonth();</tt>
+<br><tt>&nbsp;day = day1.getDate();</tt>
+<br><tt>&nbsp;year = day1.getYear();</tt>
+<br><tt>&nbsp;if (navigator.appName == "Netscape")</tt>
+<br><tt>&nbsp; year = year + 1900;</tt>
+<br><tt>&nbsp;document.writeln("&lt;BR> Today is: " + month + "/" + day
++ "/" + year);</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;a href="js4.htm#ex8"> Go Back &lt;/a></tt>
+<br><tt>&lt;/body></tt>
+<br><tt>&lt;/html></tt>
+<p>
+<hr WIDTH="100%">
+<p>Here's an example where we measure the&nbsp;<a NAME="ex9"></a><a href="ex9.htm">time
+between button clicks</a>:
+<p><tt>&lt;html></tt>
+<br><tt>&lt;head></tt>
+<br><tt>&nbsp;&nbsp;&nbsp; &lt;title>Example 9&lt;/title></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;script></tt>
+<br><tt>var oldtime;</tt>
+<br><tt>var newtime;</tt>
+<br><tt>function getNiceTime(time)</tt>
+<br><tt>{</tt>
+<br><tt>&nbsp;hour = time.getHours();</tt>
+<br><tt>&nbsp;minutes = time.getMinutes();</tt>
+<br><tt>&nbsp;seconds = time.getSeconds();</tt>
+<br><tt>&nbsp;if (hour >= 13)</tt>
+<br><tt>&nbsp;{</tt>
+<br><tt>&nbsp; hour = hour - 12;</tt>
+<br><tt>&nbsp; ampm = "PM";</tt>
+<br><tt>&nbsp;}</tt>
+<br><tt>&nbsp;else</tt>
+<br><tt>&nbsp; ampm = "AM";</tt>
+<br><tt>&nbsp;if (hour == 0)</tt>
+<br><tt>&nbsp; hour = 12;</tt>
+<br><tt>&nbsp;if (minutes &lt; 10)</tt>
+<br><tt>&nbsp;{</tt>
+<br><tt>&nbsp; minutes = "0" + minutes;</tt>
+<br><tt>&nbsp;}</tt>
+<br><tt>&nbsp;if (seconds &lt; 10)</tt>
+<br><tt>&nbsp;{</tt>
+<br><tt>&nbsp; seconds = "0" + seconds;</tt>
+<br><tt>&nbsp;}</tt>
+<br><tt>&nbsp;return hour + ":" +&nbsp; minutes + ":" + seconds + ampm;</tt>
+<br><tt>}</tt>
+<p><tt>function startUp(first)</tt>
+<br><tt>{</tt>
+<br><tt>&nbsp;oldtime = new Date();</tt>
+<br><tt>&nbsp;newtime = oldtime;</tt>
+<br><tt>&nbsp;first.value = getNiceTime(oldtime);</tt>
+<br><tt>}</tt>
+<p><tt>function handleClick(first, second, difference)</tt>
+<br><tt>{</tt>
+<br><tt>&nbsp;oldtime = newtime;</tt>
+<br><tt>&nbsp;newtime = new Date();</tt>
+<br><tt>&nbsp;first.value = getNiceTime(oldtime);</tt>
+<br><tt>&nbsp;second.value = getNiceTime(newtime);</tt>
+<br><tt>&nbsp;// differencetime in milliseconds</tt>
+<br><tt>&nbsp;differencetime = Date.parse(newtime) - Date.parse(oldtime);</tt>
+<br><tt>&nbsp;difference.value = (differencetime / 1000) + " seconds";</tt>
+<br><tt>}</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;body</tt>
+<br><tt>onLoad="startUp(document.form1.first);"></tt>
+<br><tt>&lt;form name="form1"></tt>
+<br><tt>Last Clicked:</tt>
+<br><tt>&lt;input type=text name=first size=15></tt>
+<br><tt>&lt;br>New Click:</tt>
+<br><tt>&lt;input type=text name=second size=15></tt>
+<br><tt>&lt;br>Difference:</tt>
+<br><tt>&lt;input type=text name=difference size=15></tt>
+<br><tt>&lt;br></tt>
+<br><tt>&lt;input type=button value="Click here"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; onClick="handleClick(first,
+second, difference);"></tt>
+<br><tt>&lt;/form></tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;a href="js4.htm#ex9"> Go Back &lt;/a></tt>
+<br><tt>&lt;/body></tt>
+<br><tt>&lt;/html></tt>
+<p>
+<hr WIDTH="100%">
+<p>Let's now think about another object - Window.
+<p>The Window object contains a number of useful properties, methods, and
+event handlers. We've already used quite a number of them without specifying
+that they were part of the Window object.
+<p>First, the current window can be called either self or window.
+<p>Second, we are allowed to use properties or methods of the Window object
+without prefacing them with the name of the object or the identifier for
+a particular window. If we leave out the identifier, we mean the property
+of the current window or a method applied to the current window.
+<p>The set of properties are:
+<br>&nbsp;
+<table>
+<tr VALIGN=TOP>
+<td>closed</td>
+
+<td>A read-only Boolean that specifies whether a window has been closed.</td>
+</tr>
+
+<tr>
+<td>defaultStatus</td>
+
+<td>The default message in the status line.</td>
+</tr>
+
+<tr>
+<td>frames[]</td>
+
+<td>An array of frames contained by this window.</td>
+</tr>
+
+<tr>
+<td>history</td>
+
+<td>A reference to the History object for this window.</td>
+</tr>
+
+<tr>
+<td>java</td>
+
+<td>A reference to the JavaPackage object.</td>
+</tr>
+
+<tr>
+<td>length</td>
+
+<td>The number of elements in the frames[] array.</td>
+</tr>
+
+<tr>
+<td>location</td>
+
+<td>A reference to the Location object for this window.</td>
+</tr>
+
+<tr>
+<td>Math</td>
+
+<td>A reference to an object holding mathematical functions and constants.</td>
+</tr>
+
+<tr>
+<td>name</td>
+
+<td>A string that contains the name of the window.</td>
+</tr>
+
+<tr>
+<td>navigator</td>
+
+<td>A reference to the Navigator object that applies to this and all other
+windows.</td>
+</tr>
+
+<tr>
+<td>netscape</td>
+
+<td>A reference to the JavaPackage object.</td>
+</tr>
+
+<tr>
+<td>opener</td>
+
+<td>Refers to the Window object that called open() to create this window.</td>
+</tr>
+
+<tr>
+<td>Packages</td>
+
+<td>A reference to the JavaPackage object.</td>
+</tr>
+
+<tr>
+<td>parent</td>
+
+<td>A reference to the parent window or frame of the current window. Only
+useful if the current window is a frame.</td>
+</tr>
+
+<tr>
+<td>self</td>
+
+<td>A reference to the window itself.</td>
+</tr>
+
+<tr>
+<td>status</td>
+
+<td>The current contents of the status line.</td>
+</tr>
+
+<tr>
+<td>sun</td>
+
+<td>A reference to the JavaPackage object.</td>
+</tr>
+
+<tr VALIGN=TOP>
+<td>top</td>
+
+<td>A reference to the top-level window that contains the current window.
+Only useful if the current window is a frame.</td>
+</tr>
+
+<tr>
+<td>window</td>
+
+<td>A reference to the window itself.</td>
+</tr>
+</table>
+
+<p>The set of methods are:
+<br>&nbsp;
+<br>&nbsp;
+<table>
+<tr VALIGN=TOP>
+<td>alert(message)</td>
+
+<td>Displays the message in a dialog box popped up over window.</td>
+</tr>
+
+<tr>
+<td>blur()</td>
+
+<td>Removes focus from the window.</td>
+</tr>
+
+<tr>
+<td>clearTimeout(timeoutID)</td>
+
+<td>Cancels the execution of code deferred with the setTimeOut() method.</td>
+</tr>
+
+<tr>
+<td>close()</td>
+
+<td>Closes the window. Netscape only closes windows opened by JavaScript.</td>
+</tr>
+
+<tr VALIGN=TOP>
+<td>confirm(question)</td>
+
+<td>Displays the question in a dialog box popped up over window. Returns
+true if user clicks OK. Otherwise returns false.</td>
+</tr>
+
+<tr>
+<td>focus()</td>
+
+<td>Gives focus to a window.</td>
+</tr>
+
+<tr>
+<td>navigate(url)</td>
+
+<td>In Internet Explorer, loads the URL into the window.</td>
+</tr>
+
+<tr VALIGN=TOP>
+<td>open(url, name, [features, [replace]])</td>
+
+<td>Opens an existing window (using the name argument) or a new browser
+window (if the name argument doesn't specify an existing window). The created
+window displays the URL specified by url, has the name specified by name,
+and has the size and controls specifies by features. If the url is "",
+a blank window is opened. If replace is true, the new window replaces the
+old in the history.
+<p>The features argument is a comma-separated list. Each element in the
+list is of the form feature[=value], with no white space. For yes/no values,
+you can leave the value out. The features are:
+<ul>
+<li>
+toolbar&nbsp;</li>
+
+<li>
+location (input field for entering URLs into browser)</li>
+
+<li>
+directories (directory buttons)</li>
+
+<li>
+status (status line)</li>
+
+<li>
+menubar&nbsp;</li>
+
+<li>
+scrollbars</li>
+
+<li>
+resizable</li>
+
+<li>
+width (in pixels)</li>
+
+<li>
+height (in pixels)</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>prompt(message,default)</td>
+
+<td>Returns string entered by user, or null if user clicked Cancel.</td>
+</tr>
+
+<tr>
+<td>scroll(x,y)</td>
+
+<td>Moves the document so that specified coordinates are in the top-left
+corner of window.</td>
+</tr>
+
+<tr>
+<td>setTimeout(code, delay)</td>
+
+<td>Returns an id number. Executes the code after the delay, in milliseconds.</td>
+</tr>
+</table>
+
+<p>Finally there are event handlers. You can specify the code for an event
+handler by specifying the attribute of the BODY or FRAMESET tag. Or you
+can assign a function to the appropriate property of the Window object;
+for example:
+<p><tt>&nbsp;&nbsp;&nbsp; window.onerror=handler-function;</tt>
+<p>You can call an event handler explicitly. For example:
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <tt>window.onblur();</tt>
+<br>&nbsp;
+<table>
+<tr>
+<td>onBlur()</td>
+
+<td>Called when window loses the input focus.</td>
+</tr>
+
+<tr>
+<td>onerror()</td>
+
+<td>Called when a JavaScript error occurs. Can't be defined in an HTML
+tag.</td>
+</tr>
+
+<tr>
+<td>onfocus()</td>
+
+<td>Called when window gains focus.</td>
+</tr>
+
+<tr>
+<td>onload()</td>
+
+<td>Called when a document finishes loading.</td>
+</tr>
+
+<tr>
+<td>onunload()</td>
+
+<td>Called when a browser leaves the page.</td>
+</tr>
+</table>
+
+<p>Lets look at the following example. <a href="#" onclick="openClock();">Clicking
+the link</a> will cause a new window to open that displays the current
+time digitally. The current time redisplays itself every minute.
+<p>The code for the new page is:
+<p><tt>&lt;html></tt>
+<br><tt>&lt;head></tt>
+<br><tt>&nbsp;&nbsp;&nbsp; &lt;title>Clock&lt;/title></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;script src=nicetime.js></tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;script></tt>
+<br><tt>function startUp()</tt>
+<br><tt>{</tt>
+<br><tt>&nbsp;document.form1.current.value = getNiceTime(new Date());</tt>
+<br><tt>&nbsp;setTimeout("startUp(document.form1.current.value)",1000);</tt>
+<br><tt>}</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;body</tt>
+<br><tt>onLoad="startUp();"></tt>
+<br><tt>&lt;form name="form1"></tt>
+<br><tt>Current Time:</tt>
+<br><tt>&lt;input type=text name=current size=15></tt>
+<br><tt>&lt;/form></tt>
+<br><tt>&lt;/body></tt>
+<br><tt>&lt;/html></tt>
+<p>Notice that the script container's SRC attribute is set for the name
+of a file. This allows you to load code from another file into your page.
+The file nicetime.js contains the getNiceTime() function we looked at previously.
+<p>The setTimeout method calls the startUp function after 1000 milliseconds.
+<p>The link for the opening the new window from this page looks like this:
+<p><tt>&lt;a href="#" onclick="openClock();"></tt>
+<p>And the script container in the HEAD container for this page contains
+the definition of the openClock() function:
+<p><tt>&lt;script></tt>
+<br><tt>function openClock()</tt>
+<br><tt>{</tt>
+<br><tt>&nbsp;window.open("ex10.htm","clock","status,width=200,height=30");</tt>
+<br><tt>}</tt>
+<br><tt>&lt;/script></tt>
+<p>
+<hr WIDTH="100%">
+<p>The setTimeout() method can be used to implement animation or a slideshow.
+Consider the&nbsp;<a NAME="ex11"></a><a href="ex11.htm">following example</a>:
+<p><tt>&lt;html></tt>
+<br><tt>&lt;head></tt>
+<br><tt>&nbsp;&nbsp;&nbsp; &lt;title>Example 11&lt;/title></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;script></tt>
+<br><tt>pictures = new Array(3); // elements 0..2</tt>
+<br><tt>var index = 0;</tt>
+<br><tt>pictures[0] = "flower1.gif";</tt>
+<br><tt>pictures[1] = "flower2.gif";</tt>
+<br><tt>pictures[2] = "flower3.gif";</tt>
+<p><tt>function animate()</tt>
+<br><tt>{</tt>
+<br><tt>&nbsp; document.pic1.src=pictures[index % 3];</tt>
+<br><tt>&nbsp; index++;</tt>
+<br><tt>&nbsp; setTimeout("animate()", 250);</tt>
+<br><tt>}</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;body onload="animate();"></tt>
+<br><tt>&lt;center></tt>
+<br><tt>&lt;img SRC="flower1.gif" NAME="pic1" height=80 width=78></tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;a href="js4.htm#ex11"> Go Back &lt;/a></tt>
+<br><tt>&lt;/body></tt>
+<br><tt>&lt;/html></tt>
+<p>The animate() function changes the picture and then calls itself after
+a delay of 250 milliseconds. This is like recursion.
+<p>To store the names of the picture files, we use an array. To create
+an array, you use the new operator and the constructor function for the
+Array object. You must specify the size of the Array.
+<p>Then you can supply values for the elements of the array.
+<p>
+<hr WIDTH="100%">
+<p>You can also define an array with its values in place, as in the<a NAME="ex12"></a><a href="ex12.htm">following
+example</a>:
+<p><tt>&lt;html></tt>
+<br><tt>&lt;head></tt>
+<br><tt>&nbsp;&nbsp;&nbsp; &lt;title>Example 12&lt;/title></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;script></tt>
+<br><tt>var index=0;</tt>
+<br><tt>pictures = new Array("flower1.gif","flower2.gif","flower3.gif","flower4.gif");</tt>
+<p><tt>function animate()</tt>
+<br><tt>{</tt>
+<br><tt>&nbsp; document.pic1.src=pictures[index % pictures.length];</tt>
+<br><tt>&nbsp; index++;</tt>
+<br><tt>&nbsp; setTimeout("animate()", 250);</tt>
+<br><tt>}</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;body onload="animate();"></tt>
+<br><tt>&lt;center></tt>
+<br><tt>&lt;img SRC="flower1.gif" NAME="pic1" height=80 width=78></tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;a href="js4.htm#ex12"> Go Back &lt;/a></tt>
+<br><tt>&lt;/body></tt>
+<br><tt>&lt;/html></tt>
+<br>&nbsp;
+<p>Notice that the length property of the array stores the number of elements
+in the array.
+<p>There are also three methods defined for an Array object:
+<br>&nbsp;
+<br>&nbsp;
+<table>
+<tr VALIGN=TOP>
+<td>join([separator])</td>
+
+<td>Returns a string that results from concatenating all array elements,
+with the separator string between elements. If there is no argument, then
+the null string is used.</td>
+</tr>
+
+<tr>
+<td>reverse()</td>
+
+<td>Reverses the elements of the array.</td>
+</tr>
+
+<tr VALIGN=TOP>
+<td>sort([orderfunc])</td>
+
+<td>Sorts the array. If no orderfunc, then it's an alphabetical sort. Here's
+an example of an ordering function:
+<p><tt>function numberorder(a, b) { return a - b; }</tt></td>
+</tr>
+</table>
+
+<br>&nbsp;
+<br>&nbsp;
+</body>
+</html>

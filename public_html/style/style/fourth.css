@@ -1,0 +1,58 @@
+body {
+	background : lightyellow
+}
+
+div.logostuff { 
+	font-family: Arial, sans-serif; 
+	font-weight: bolder; 
+	font-size: 4em; 
+	text-align: center;
+	position: absolute;
+	left: 100px;
+	top: 0px;
+}
+
+#logo {	
+	position: absolute; 	
+	z-index: 2; 
+	left: 0px; 
+	top: 30px; 
+	color: #CC0000;
+}
+
+#logoshadow { 
+	position: absolute; 
+	z-index: 1; 
+	left: 4px; 
+	top: 34px; 
+	color: #AAAAAA;
+}
+
+div.relativity { 
+	position: absolute;
+	left: 0px;
+	top: 400px;
+        height: 400px;
+        width: 700px;
+        border-style: groove;
+}
+
+#nexttext { 
+	position: relative; 
+	left: 0px; 
+	top: 200px; 
+}
+
+#thirdtext { 
+	position: relative; 
+	left: -200px; 
+	top: 0px; 
+}
+
+div.clipped {
+	position: absolute; 
+	top: 800px; 
+	left: 100px;
+	clip: rect(0px 100px 150px 0px);
+	/* top right bottom left
+}       

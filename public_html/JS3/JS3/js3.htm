@@ -1,0 +1,872 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="js3_files/filelist.xml">
+<link rel=Edit-Time-Data href="js3_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>JavaScript Control Structures</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>john</o:Author>
+  <o:LastAuthor>john</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>30</o:TotalTime>
+  <o:Created>2007-02-13T00:38:00Z</o:Created>
+  <o:LastSaved>2007-02-13T01:08:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>1574</o:Words>
+  <o:Characters>8972</o:Characters>
+  <o:Company>home</o:Company>
+  <o:Lines>74</o:Lines>
+  <o:Paragraphs>21</o:Paragraphs>
+  <o:CharactersWithSpaces>10525</o:CharactersWithSpaces>
+  <o:Version>10.3501</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+tt
+	{font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:680200971;
+	mso-list-template-ids:1294352612;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:2134210057;
+	mso-list-template-ids:879680412;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]-->
+<meta name=Author content="John Avitabile">
+</head>
+
+<body lang=EN-US link=blue vlink=blue style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:13.5pt'>JavaScript Control Structures</span></p>
+
+<p>The control structures in JavaScript are very similar to those of C++. </p>
+
+<p>Let's look at the following&nbsp;<a name=ex1></a><a href="ex1.htm">example</a>:
+</p>
+
+<p><tt><span style='font-size:10.0pt'>&lt;html&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; &lt;title&gt;Example
+1&lt;/title&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;function max(a, b, box)</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; if (a &gt; b)</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp; box.value = &quot;First number
+is bigger&quot;;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; else if (a &lt; b)</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp; box.value = &quot;Second number
+is bigger&quot;;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; else</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp; box.value =
+&quot;Equality&quot;;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;}</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;form&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>Number 1 &lt;input type=&quot;text&quot;
+name=&quot;num1&quot;&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;br&gt; Number 2 &lt;input type=&quot;text&quot;
+name=&quot;num2&quot;&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;br&gt; &lt;input type=&quot;button&quot;
+value=&quot;Get Larger&quot;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+onClick=&quot;max(num1.value, num2.value, text1);&quot;&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;input type=text size=40 name=text1&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;/form&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;a href=&quot;js3.htm#ex1&quot;&gt; Go
+Back &lt;/a&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/html&gt;</span></tt> </p>
+
+<p>This script sort of works, but notice that it thinks that 9 is bigger than
+312! Why is that? Because the value of a text field is String by default, so
+the comparison is a String comparison! </p>
+
+<p>Unlike C++, it is legal to compare Strings with the usual comparison
+operators, which are: </p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo1;tab-stops:list .5in'><tt><span style='font-size:
+     10.0pt'>==</span></tt></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo1;tab-stops:list .5in'><tt><span style='font-size:
+     10.0pt'>&lt;=</span></tt></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo1;tab-stops:list .5in'><tt><span style='font-size:
+     10.0pt'>&gt;=</span></tt></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo1;tab-stops:list .5in'><tt><span style='font-size:
+     10.0pt'>!=</span></tt></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo1;tab-stops:list .5in'><tt><span style='font-size:
+     10.0pt'>&lt;</span></tt></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo1;tab-stops:list .5in'><tt><span style='font-size:
+     10.0pt'>&gt;</span></tt></li>
+</ul>
+
+<p class=MsoNormal>Here's a&nbsp;<a name=ex2></a><a href="ex2.htm">better
+version</a>: </p>
+
+<p><tt><span style='font-size:10.0pt'>&lt;html&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; &lt;title&gt;Example
+2&lt;/title&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;function max(a, b, box)</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; if (a &gt; b)</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp; box.value = &quot;First number
+is bigger&quot;;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; else if (a &lt; b)</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp; box.value = &quot;Second number
+is bigger&quot;;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; else</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp; box.value =
+&quot;Equality&quot;;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;}</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;form&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>Number 1 &lt;input type=&quot;text&quot;
+name=&quot;num1&quot;&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;br&gt; Number 2 &lt;input
+type=&quot;text&quot; name=&quot;num2&quot;&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;br&gt; &lt;input type=&quot;button&quot;
+value=&quot;Get Larger&quot;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+onClick=&quot;max(parseFloat(num1.value), parseFloat(num2.value),
+text1);&quot;&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;input type=text size=40 name=text1&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;/form&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;a href=&quot;js3.htm#ex2&quot;&gt; Go
+Back &lt;/a&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/html&gt;</span></tt> </p>
+
+<p>As in C++, the general form of an if statement is: </p>
+
+<p><tt><span style='font-size:10.0pt'>if (conditional expression)</span></tt> <br>
+<tt><span style='font-size:10.0pt'>{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; statements if true;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>}</span></tt> </p>
+
+<p>And you're allowed to have else clauses: </p>
+
+<p><tt><span style='font-size:10.0pt'>if (conditional expression)</span></tt> <br>
+<tt><span style='font-size:10.0pt'>{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; statements if true;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>}</span></tt> <br>
+<tt><span style='font-size:10.0pt'>else</span></tt> <br>
+<tt><span style='font-size:10.0pt'>{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; statements if false;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>}</span></tt> </p>
+
+<p>And you can have as many &quot;else if&quot;s as you like: </p>
+
+<p><tt><span style='font-size:10.0pt'>if (conditional expression)</span></tt> <br>
+<tt><span style='font-size:10.0pt'>{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; statements if first
+condition expression is true;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>}</span></tt> <br>
+<tt><span style='font-size:10.0pt'>else if (conditional expression)</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; statements if second
+condition expression is true;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>}</span></tt> <br>
+<tt><span style='font-size:10.0pt'>else</span></tt> <br>
+<tt><span style='font-size:10.0pt'>{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; statements if false;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>}</span></tt> </p>
+
+<p>The braces are necessary if there is more than one statement in the
+instructions... </p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>The value null can also be used in a conditional expression, to test to see
+if a variable is empty. Of course, the value of an empty textfield is &#8220;&#8221;.Look
+at the&nbsp;<a name=ex4></a><a href="ex4.htm">next example</a>. </p>
+
+<p><tt><span style='font-size:10.0pt'>&lt;html&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; &lt;title&gt;Example
+4&lt;/title&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;function getData()</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; alert(&quot;Hit the Cancel on the
+next prompt&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; var a = prompt(&quot;Can you follow
+directions?&quot;,&quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; if (a == null)</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; {</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp; alert(&quot;Do you always
+follow directions?&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; }</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; else</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; {</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp; alert(&quot;Why don't you do
+what I say?&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; }</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;}</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;function doubled(box1, box2)</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; if (box1.value == null)</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp; box2.value = &quot;It was
+null&quot;;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; else if (box1.value == &quot;&quot;)</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp; box2.value = &quot;It's
+empty!&quot;;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; else</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp; box2.value = box1.value * 2;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;}</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;form&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;br&gt; &lt;input type=&quot;button&quot;
+value=&quot;Click Me First&quot; onClick=&quot;getData();&quot;&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;br&gt;&lt;input type=&quot;text&quot;
+name=op1 size=10&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>* 2</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;input type=&quot;button&quot;
+value=&quot;=&quot; onClick=&quot;doubled(op1, ans);&quot;&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;input type=text name=ans size=10&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;/form&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;a href=&quot;js3.htm#ex4&quot;&gt; Go
+Back &lt;/a&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/html&gt;</span></tt> </p>
+
+<p>The value of a variable that has not been given a value is <b>null</b>. </p>
+
+<p>But the numeric value of an empty text field is 0! </p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>We can also use Boolean operators in the conditional expression. </p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo2;tab-stops:list .5in'><tt><span style='font-size:
+     13.5pt'>&amp;&amp;</span></tt> is AND</li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo2;tab-stops:list .5in'><tt><span style='font-size:
+     13.5pt'>||</span></tt> is OR</li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo2;tab-stops:list .5in'><tt><span style='font-size:
+     13.5pt'>!</span></tt> is NOT</li>
+</ul>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>In&nbsp;<a name=ex5></a><a href="ex5.htm">this</a> example, we&#8217;ll
+change an image based on the value of a select&#8230;</p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;html&gt;
+<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;head&gt;
+<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>&lt;title&gt;Example 5&lt;/title&gt; <o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;script&gt;
+<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span>function changePicture()<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span>{ <o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>if (document.form1.ape.value ==
+&quot;gorilla&quot;)<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>     
+</span>document.pic1.src=&quot;gorilla.jpg&quot;;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>else if (document.form1.ape.value ==
+&quot;chimp&quot;)<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>      </span>document.pic1.src=&quot;chimp.jpg&quot;;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>else <o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>     
+</span>document.pic1.src=&quot;orangutang.jpg&quot;;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'> </span><span style='mso-spacerun:yes'>   </span>}<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;/script&gt;
+<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;/head&gt;
+<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;body&gt;
+<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;p&gt;
+<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>Pick
+your ape!<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;form
+name=&quot;form1&quot;&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span>&lt;select name=&quot;ape&quot;
+onChange=&quot;changePicture()&quot;&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>&lt;option value=&quot;chimp&quot;
+checked&gt;Chimp&lt;/option&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>&lt;option
+value=&quot;gorilla&quot;&gt;Gorilla&lt;/option&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>&lt;option
+value=&quot;orangutang&quot;&gt;Orangutang&lt;/option&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span>&lt;/select&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;/form&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;img
+src=&quot;chimp.jpg&quot; name=&quot;pic1&quot;&gt; <o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;P&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;a
+href=&quot;js3.htm#ex5&quot;&gt; Go Back &lt;/a&gt; <o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;/body&gt;
+<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;/html&gt;
+<o:p></o:p></span></tt></p>
+
+<p>Note that an IMG command must have a name (or an id) if you are going to
+change the src attribute of a graphic. This is true about changing an attribute
+of any command. </p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>Besides alert and prompt, there is also another similar function called
+confirm. The confirm function returns true or false, depending upon which
+button you clicked. Look at this&nbsp;<a name=ex6></a><a href="ex6.htm">example</a>:
+</p>
+
+<p><tt><span style='font-size:10.0pt'>&lt;html&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; &lt;title&gt;Example
+6&lt;/title&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>var ans = confirm(&quot;Do you really want
+to go here?&quot;)</span></tt> <br>
+<tt><span style='font-size:10.0pt'>if (ans == false)</span></tt> <br>
+<tt><span style='font-size:10.0pt'>{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;history.go(-1);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>}</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;a href=&quot;js3.htm#ex6&quot;&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>Go Back</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/a&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/html&gt;</span></tt> </p>
+
+<p>Since the script is in the head, it gets loaded before the page. </p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>Here's&nbsp;<a name=ex7></a><a href="ex7.htm">another example</a>. Notice
+that if the value of location is changed, you go to a new page... </p>
+
+<p><tt><span style='font-size:10.0pt'>&lt;html&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; &lt;title&gt;Example
+7&lt;/title&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>var ans = confirm(&quot;Do you want to go to
+Saint Rose instead?&quot;)</span></tt> <br>
+<tt><span style='font-size:10.0pt'>if (ans)</span></tt> <br>
+<tt><span style='font-size:10.0pt'>{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;location=&quot;http://www.strose.edu&quot;;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>}</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;a href=&quot;js3.htm#ex7&quot;&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>Go Back</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/a&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/html&gt;</span></tt> </p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>We have for loops, while loops, and do while loops in JavaScript. The one
+change is that the conditional expression can be either a Boolean value or an
+integer. </p>
+
+<p>We also have a switch statement in JavaScript. The one difference is that
+the expression we do the switch on can be either a number or a String. </p>
+
+<p>The&nbsp;<a name=ex8></a><a href="ex8.htm">next example</a> quickly
+illustrates some of these ideas: </p>
+
+<p><tt><span style='font-size:10.0pt'>&lt;html&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; &lt;title&gt;Example
+8&lt;/title&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;function getFactorial()</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; var x = prompt(&quot;Enter an
+integer&quot;,&quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; if (x == null)</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp; alert(&quot;Don't hit the
+Cancel!&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; else</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; {</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp; answer = 1;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp; for (i = 1; i &lt;= x; i++)</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp; {</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; answer = answer * i;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp; }</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp; alert (x + &quot; factorial is
+&quot; + answer);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; }</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;}</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;form&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;br&gt; &lt;input type=&quot;button&quot;
+value=&quot;Play Craps&quot;
+onClick=&quot;window.open('ex10.htm','PlayCraps');&quot;&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;br&gt; &lt;input type=&quot;button&quot;
+value=&quot;Astrology&quot;
+onClick=&quot;window.open('ex9.htm','Astrology')&quot;&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;br&gt; &lt;input type=&quot;button&quot;
+value=&quot;Get Factorial&quot; onClick=&quot;getFactorial()&quot;&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;/form&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;a href=&quot;js3.htm#ex8&quot;&gt; Go
+Back &lt;/a&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/html&gt;</span></tt> </p>
+
+<p>The getFactorial function has an example of a for loop. </p>
+
+<p>Notice that clicking the other buttons causes the window.open() function to
+be called. The first argument of the function is the page to go to. The second
+argument is the name of the new window. There are other optional arguments, but
+we'll discuss these later. </p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>The &quot;Astrology&quot; page looks like this: </p>
+
+<p><tt><span style='font-size:10.0pt'>&lt;html&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp; &lt;title&gt; Page 7
+&lt;/title&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>function getSignMessage()</span></tt> <br>
+<tt><span style='font-size:10.0pt'>{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;var sign = prompt(&quot;What is your
+birth sign?&quot;,&quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;switch (sign)</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; case &quot;Aquarius&quot;: case
+&quot;AQUARIUS&quot;: case &quot;aquarius&quot;:</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+document.writeln(&quot;You will be lucky today!&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp; case &quot;Cancer&quot;: case
+&quot;CANCER&quot;: case &quot;cancer&quot;:</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.writeln(&quot;You
+will meet your true love today!&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp; case &quot;Libra&quot;: case
+&quot;LIBRA&quot;:&nbsp; case &quot;libra&quot;:</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+document.writeln(&quot;You will have great success!&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;case &quot;Pisces&quot;: case
+&quot;PISCES&quot;: case &quot;pisces&quot;:</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+document.writeln(&quot;You will find your best friend today!&quot;);</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;case &quot;Gemini&quot;: case
+&quot;GEMINI&quot;: case &quot;gemini&quot;:</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+document.writeln(&quot;Be wary of strangers!&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;case &quot;Capricorn&quot;: case
+&quot;CAPRICORN&quot;: case &quot;capricorn&quot;:</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+document.writeln(&quot;Do something humorous!&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;case &quot;Taurus&quot;: case
+&quot;TAURUS&quot;: case &quot;taurus&quot;:</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+document.writeln(&quot;Have fun tonight!&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;case &quot;Leo&quot;: case
+&quot;LEO&quot;: case &quot;leo&quot;:</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+document.writeln(&quot;Study tonight!&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;case &quot;Scorpio&quot;: case
+&quot;SCORPIO&quot;: case &quot;scorpio&quot;:</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+docuement.writeln(&quot;Don't eat chocolate cake for breakfast!&quot;);</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;case &quot;Sagittarius&quot;: case
+&quot;SAGITTARIUS&quot;: case &quot;sagittarius&quot;:</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+document.writeln(&quot;Be careful with your finances!&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;case &quot;Aries&quot;: case
+&quot;ARIES&quot;: case &quot;aries&quot;:</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+document.writeln(&quot;Don't look behind you! It might be catching up!&quot;);</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;case &quot;Virgo&quot;: case
+&quot;VIRGO&quot;: case &quot;virgo&quot;:</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+document.writeln(&quot;Be prepared for your next test!&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;default:</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+document.writeln(&quot;Learn to spell!&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;}</span></tt> <br>
+<tt><span style='font-size:10.0pt'>}</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;getSignMessage();</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;form&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;input type=button value=&quot;good
+bye&quot; onClick=&quot;window.close(); return true;&quot;&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/form&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/html&gt;</span></tt> </p>
+
+<p>As you can see, string values can be included in the switch. </p>
+
+<p>The function window.close() causes this window to close. </p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>In the &quot;Craps example, we make use of a do while loop. </p>
+
+<p>Also note the use of two functions: </p>
+
+<p>Math.ceil() returns the value of its argument, rounded up. </p>
+
+<p>Math.random() returns a random floating point&nbsp; number in the range from
+0 to 1. </p>
+
+<p><tt><span style='font-size:10.0pt'>&lt;html&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;title&gt; Craps &lt;/title&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>function playcraps(field)</span></tt> <br>
+<tt><span style='font-size:10.0pt'>{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; var bet=prompt(&quot;How much this
+time?&quot;,&quot;1&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; var firstroll1 =
+Math.ceil(Math.random()*6);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; var firstroll2 =
+Math.ceil(Math.random()*6);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; var firstsum = firstroll1 +
+firstroll2;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; alert(&quot;You rolled &quot; +
+firstsum);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; switch(firstsum)</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; {</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; case 7: case 11:</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; alert(&quot;You
+win!&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; field.value =
+parseInt(field.value) + parseInt(bet);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; break;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; case 2: case 3: case 12:</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; alert(&quot;You
+lose!&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; field.value =
+parseInt(field.value) - parseInt(bet);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; break;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; default:</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; do {</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+alert(&quot;You gotta keep rolling!&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var
+secondroll1 = Math.ceil(Math.random()*6);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var
+secondroll2 = Math.ceil(Math.random()*6);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var secondsum
+= secondroll1 + secondroll2;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+alert(&quot;You rolled &quot; + secondsum);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; } while (secondsum !=
+firstsum &amp;&amp; secondsum != 7);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; if (secondsum ==
+firstsum)</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; {</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+alert(&quot;You win!&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; field.value =
+parseInt(field.value) + parseInt(bet);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; }</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; else</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; {</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+alert(&quot;You lose!&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; field.value =
+parseInt(field.value) - parseInt(bet);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp; }</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; }</span></tt> <br>
+<tt><span style='font-size:10.0pt'>}</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/head&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;body&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;center&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;font size=5&gt;Craps&lt;/font&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;/center&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>Click the Button to Shoot Those Dice!</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;form&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>Winnings:</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;input type=text
+name=&quot;winnings&quot; value=&quot;0&quot;&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;input type=button value=&quot;Play
+Game&quot;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;onClick=&quot;playcraps(winnings);&quot;&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;/form&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/html&gt;</span></tt> </p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+body 	{
+	background : white; color : black;
+	font-family: times new roman, serif; 
+	margin-left: 10%; margin-right: 10%;
+        scrollbar-face-color: red;
+        scrollbar-arrow-color: green;
+        scrollbar-track-color: black;
+        scrollbar-shadow-color: yellow;
+}
+
+a:link { color: blue; }  /* for unvisited links */
+a:visited { color: black; } /* for visited links */
+a:active { color: green; } /* when link is clicked */
+a:hover { color: red; } /* when mouse is over link */
+
+h1, h2, h3, h4, h5, h6 	{
+	font-family : arial, sans-serif; 
+	color : blue; 
+	text-align: center;
+	margin-top: 1em; margin-bottom: 1em;
+}
+
+pre, code { font-family: monospace; }
+
+.box { 
+	border: solid; 
+	border-width: thin; 
+	width: 100%; 
+	padding: 1em; 
+}
+
+b { color: maroon; }
+
+p.dropcap:first-letter { 
+	font-size: 3em; 
+	float: left; 
+	color: maroon; 
+}
+
+#elScroll{
+	border-style: dotted none none double;
+        overflow: scroll; 
+	height: 100px; 
+	width: 400px;
+        padding: 2em;
+        scrollbar-track-color: white;
+}
+

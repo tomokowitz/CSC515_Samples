@@ -1,0 +1,476 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="John Avitabile">
+   <meta name="GENERATOR" content="Mozilla/4.61 [en] (Win98; I) [Netscape]">
+   <title>JavaScript Introduction</title>
+</head>
+<body>
+
+<center><font size=+1>The JavaScript Language</font></center>
+
+<p>In this section, we'll focus on the features of the JavaScript programming
+language.
+<p>To start with, you need not declare a variable first if you want to
+assign a value into it. For example, the following two groups of statements
+are both legal:
+<blockquote><tt>var my_age;</tt>
+<br><tt>my_age = prompt("Enter your age","");</tt>
+<p><tt>my_age = prompt("Enter your age","");</tt></blockquote>
+However, it is illegal to <b>use</b> a variable's value if it has been
+neither declared nor assigned a value.
+<p>Let's look at the<a NAME="ex1"></a> <a href="ex1.htm">following example</a>.
+<br>&nbsp;
+<p><tt>&lt;html></tt>
+<br><tt>&lt;head></tt>
+<br><tt>&nbsp;&nbsp;&nbsp; &lt;title>Example 1&lt;/title></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;body></tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;var age;</tt>
+<br><tt>&nbsp;age = prompt("Enter your age","");</tt>
+<br><tt>&nbsp;var phone;</tt>
+<br><tt>&nbsp;alert("Your age is: " + age);</tt>
+<br><tt>&nbsp;alert("Your phone number is: " + phone);</tt>
+<br><tt>&nbsp;alert("Your school is: " + school);</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;p></tt>
+<br><tt>This is the regular page.</tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;a href="js2.htm#ex1"> Go Back &lt;/a></tt>
+<br><tt>&lt;/body></tt>
+<br><tt>&lt;/html></tt>
+<p>In this example, the first alert of course shows the value of age.
+<p>The second alert is legal, since the variable phone has been declared.
+But since the variable has not been assigned a value, the value of the
+variable is the string "undefined".
+<p>Then the script fails on the third alert, since the variable school
+has neither declared nor assigned a value.
+<p>
+<hr WIDTH="100%">
+<p>The rules for naming a variable are:
+<ul>
+<li>
+First character is a letter or an underscore.</li>
+
+<li>
+Other characters are letters, digits, or underscores</li>
+
+<li>
+No spaces in variable names</li>
+
+<li>
+Variable names are case-sensitive (as is the language generally)</li>
+
+<li>
+No reserved words</li>
+</ul>
+<img SRC="reserved.jpg" height=229 width=450>
+<p>There are only three types of variables:
+<ul>
+<li>
+<b>string</b></li>
+
+<li>
+<b>numeric</b> (can store any number - integer or floating point)</li>
+
+<li>
+<b>Boolean</b> (can store <b>true</b> or <b>false</b>)</li>
+</ul>
+You can also initialize a variable when you declare it.
+<p>Unlike C++, JavaScript is a loosely typed language. You can assign any
+value to any variable.
+<p>There is also nothing incorrect if you change the type of a variable
+in a program. Consider the&nbsp;<a NAME="ex2"></a><a href="ex2.htm">following
+example</a>:
+<p><tt>&lt;html></tt>
+<br><tt>&lt;head></tt>
+<br><tt>&nbsp;&nbsp;&nbsp; &lt;title>Example 1&lt;/title></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;body></tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;var grade = 93;</tt>
+<br><tt>&nbsp;alert("The numeric grade is " + grade);</tt>
+<br><tt>&nbsp;grade = grade + 5;</tt>
+<br><tt>&nbsp;alert("Five more makes " + grade);</tt>
+<br><tt>&nbsp;grade = "A";</tt>
+<br><tt>&nbsp;alert("The string grade is " + grade);</tt>
+<br><tt>&nbsp;grade = grade + 5;</tt>
+<br><tt>&nbsp;alert("Five more makes " + grade);</tt>
+<br><tt>&nbsp;grade = true;</tt>
+<br><tt>&nbsp;alert("Is this strange? " + grade)</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;p></tt>
+<br><tt>This is the regular page.</tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;a href="js2.htm#ex2"> Go Back &lt;/a></tt>
+<br><tt>&lt;/body></tt>
+<br><tt>&lt;/html></tt>
+<p>First the variable grade starts out as a numeric variable. When we add
+5 to it, we get 98 (of course).
+<p>Then we store the string "A" in variable grade. Adding 5 to it really
+means concatenation now (since + means concatenation if at least one operand
+is a string). So we get "A5".
+<p>Finally we store a boolean value, true, in variable grade.
+<p>
+<hr WIDTH="100%">
+<p>If you declare a variable inside a function, it's local to that function,
+and can be used only within that function.
+<p>If you declare a variable outside a function, it's available anywhere
+inside the script.
+<p>If a variable is available both globally and also locally within a function,
+the function uses the more local variable.
+<p>Let's look at the following&nbsp;<a NAME="ex3"></a><a href="ex3.htm">example</a>:
+<p><tt>&lt;html></tt>
+<br><tt>&lt;head></tt>
+<br><tt>&nbsp;&nbsp;&nbsp; &lt;title>Example 3&lt;/title></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;var grade = 93;</tt>
+<br><tt>&nbsp;var phone = "999-9999";</tt>
+<br><tt>&nbsp;function f1()</tt>
+<br><tt>&nbsp;{</tt>
+<br><tt>&nbsp; var phone = "444-4444";</tt>
+<br><tt>&nbsp; var city = "Albany";</tt>
+<br><tt>&nbsp; alert("In the function...");</tt>
+<br><tt>&nbsp; alert("Global grade is " + grade);</tt>
+<br><tt>&nbsp; alert("Local phone is " + phone);</tt>
+<br><tt>&nbsp; alert("Local city is " + city);</tt>
+<br><tt>&nbsp;}</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;body></tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;f1();</tt>
+<br><tt>&nbsp;alert("In the body...");</tt>
+<br><tt>&nbsp;alert("Global phone is " + phone);</tt>
+<br><tt>&nbsp;alert("City is..." + city);</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;p></tt>
+<br><tt>This is the regular page.</tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;a href="js2.htm#ex3"> Go Back &lt;/a></tt>
+<br><tt>&lt;/body></tt>
+<br><tt>&lt;/html></tt>
+<p>
+<hr WIDTH="100%">
+<p>Here's&nbsp;<a NAME="ex4"></a><a href="ex4.htm">another example</a>.
+The function f2 redeclares variable grade1 each time it's called.
+<p>The value of the global variable grade gets reset whenever the page
+is reloaded.
+<p><tt>&lt;html></tt>
+<br><tt>&lt;head></tt>
+<br><tt>&nbsp;&nbsp;&nbsp; &lt;title>Example 4&lt;/title></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;var grade = 93;</tt>
+<br><tt>&nbsp;function f1()</tt>
+<br><tt>&nbsp;{</tt>
+<br><tt>&nbsp; grade++;</tt>
+<br><tt>&nbsp; alert("Grade is now " + grade);</tt>
+<br><tt>&nbsp;}</tt>
+<br><tt>&nbsp;function f2()</tt>
+<br><tt>&nbsp;{</tt>
+<br><tt>&nbsp; var grade1=0;</tt>
+<br><tt>&nbsp; grade1++;</tt>
+<br><tt>&nbsp; alert("Grade is now " + grade1);</tt>
+<br><tt>&nbsp;}</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;body></tt>
+<br><tt>&lt;form></tt>
+<br><tt>&nbsp;&lt;input type=button value="First Example" onclick="f1();"></tt>
+<br><tt>&nbsp;&lt;input type=button value="Second Example" onclick="f2();"></tt>
+<br><tt>&lt;/form></tt>
+<br><tt>&lt;p></tt>
+<br><tt>This is the regular page.</tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;a href="js2.htm#ex4"> Go Back &lt;/a></tt>
+<br><tt>&lt;/body></tt>
+<br><tt>&lt;/html></tt>
+<p>
+<hr WIDTH="100%">
+<center>
+<p><font size=+1>Arithmetic Operations</font></center>
+
+<p>JavaScript has a set of arithmetic operators much like in C++.
+<p>They include:
+<ul>
+<li>
+= (assignment)</li>
+
+<li>
++ (addition or concatenation)</li>
+
+<li>
+- (subtraction)</li>
+
+<li>
+* (multiplication)</li>
+
+<li>
+/ (division)</li>
+
+<li>
+% (mod)</li>
+
+<li>
+++ (increment)</li>
+
+<li>
+-- (decrement)</li>
+</ul>
+The usual order of operations apply.
+<p>We also have those weird assignment operators that are also in C, like
++=, -=, *=, /=, and %=.
+<p>There are even bit-wise operators.
+<p>And you can use parentheses to change the order of operations.
+<p>Look at the&nbsp;<a NAME="ex5"></a><a href="ex5.htm">following example</a>:
+<p><tt>&lt;html></tt>
+<br><tt>&lt;head></tt>
+<br><tt>&nbsp;&nbsp;&nbsp; &lt;title>Example 5&lt;/title></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;function average(a, b, c)</tt>
+<br><tt>&nbsp;{</tt>
+<br><tt>&nbsp; var answer = (a + b + c) / 3;</tt>
+<br><tt>&nbsp; alert ("Doing average of " + a + ", " + b</tt>
+<br><tt>&nbsp;&nbsp; + ", and " + c);</tt>
+<br><tt>&nbsp; alert("Answer is " + answer);</tt>
+<br><tt>&nbsp;}</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;body></tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;average(5, 9, 10);</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;p></tt>
+<br><tt>This is the regular page.</tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;a href="js2.htm#ex5"> Go Back &lt;/a></tt>
+<br><tt>&lt;/body></tt>
+<br><tt>&lt;/html></tt>
+<p>Of course this script always prints the average of the same three numbers!
+<p>
+<hr WIDTH="100%">
+<p>One way to get input into variables, as we've seen, is to use the prompt
+function. Consider the&nbsp;<a NAME="ex6"></a><a href="ex6.htm">next example</a>.
+<p><tt>&lt;html></tt>
+<br><tt>&lt;head></tt>
+<br><tt>&nbsp;&nbsp;&nbsp; &lt;title>Example 6&lt;/title></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;function average(a, b, c)</tt>
+<br><tt>&nbsp;{</tt>
+<br><tt>&nbsp; var answer = (a + b + c) / 3;</tt>
+<br><tt>&nbsp; alert ("Doing average of " + a + ", " + b</tt>
+<br><tt>&nbsp;&nbsp; + ", and " + c);</tt>
+<br><tt>&nbsp; alert("Answer is " + answer);</tt>
+<br><tt>&nbsp;}</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;body></tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;var num1 = prompt("Enter first number","");</tt>
+<br><tt>&nbsp;var num2 = prompt("Enter second number","");</tt>
+<br><tt>&nbsp;var num3 = prompt("Enter third number","");</tt>
+<br><tt>&nbsp;average(num1, num2, num3);</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;p></tt>
+<br><tt>This is the regular page.</tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;a href="js2.htm#ex6"> Go Back &lt;/a></tt>
+<br><tt>&lt;/body></tt>
+<br><tt>&lt;/html></tt>
+<p>There are no errors in this program, but the answer is wrong!
+<p>The problem is that the return value of the prompt function is a string!
+<p>Since we then apply the + operator to the strings, we concatenate the
+numbers! So if we input 3, 5, and 7, 3+5+7 is 357!
+<p>Then, oddly enough, JavaScript thinks it's just fine to divide a number
+into a string (as long as the string actually represents some number).
+<p>
+<hr WIDTH="100%">
+<p>The solution is that we have to convert the string value stored in the
+variable to a number before we can use the variable's value in an addition
+operation. You do not need to do this conversion for any other arithmetic
+operation. Look at the&nbsp;<a NAME="ex7"></a><a href="ex7.htm">next example</a>:
+<p><tt>&lt;html></tt>
+<br><tt>&lt;head></tt>
+<br><tt>&nbsp;&nbsp;&nbsp; &lt;title>Example 7&lt;/title></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;function average(a, b, c)</tt>
+<br><tt>&nbsp;{</tt>
+<br><tt>&nbsp; var answer = (parseInt(a) + parseInt(b) + parseInt(c)) /
+3;</tt>
+<br><tt>&nbsp; alert ("Doing average of " + a + ", " + b</tt>
+<br><tt>&nbsp;&nbsp; + ", and " + c);</tt>
+<br><tt>&nbsp; alert("Answer is " + answer);</tt>
+<br><tt>&nbsp; var product = a * b * c;</tt>
+<br><tt>&nbsp; alert("But the product is " + product);</tt>
+<br><tt>&nbsp;}</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;body></tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;var num1 = prompt("Enter first number","");</tt>
+<br><tt>&nbsp;var num2 = prompt("Enter second number","");</tt>
+<br><tt>&nbsp;var num3 = prompt("Enter third number","");</tt>
+<br><tt>&nbsp;average(num1, num2, num3);</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;p></tt>
+<br><tt>This is the regular page.</tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;a href="js2.htm#ex7"> Go Back &lt;/a></tt>
+<br><tt>&lt;/body></tt>
+<br><tt>&lt;/html></tt><tt></tt>
+<p>The parseInt function translates its String argument, and returns the
+integer equivalent.
+<p>There is a similar parseFloat function.
+<p>In Example 7, try entering the numbers 3.5, 3.8, and 3.99. As you can
+see, the parseInt function truncates any floating point number.
+<p>Again in Example 7, try entering the phrase 3 blind mice for one of
+the numbers. Now the parseInt function returns 3 for "3 blind mice", because
+the function stops when it encounters the first non-digit. Of course, the
+product no longer works, and NaN is returned in the alert statement.
+<p>
+<hr WIDTH="100%">
+<p>Another way to enter input is via form elements. For now, we'll just
+use text fields. The data you enter into a text field is a String (same
+as with the data entered into a prompt).
+<p><a NAME="ex8"></a><a href="ex8.htm">Here's another version</a> of the
+average and product program:
+<p><tt>&lt;html></tt>
+<br><tt>&lt;head></tt>
+<br><tt>&nbsp;&nbsp;&nbsp; &lt;title>Example 8&lt;/title></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;function average(a, b, c)</tt>
+<br><tt>&nbsp;{</tt>
+<br><tt>&nbsp; var answer = (parseInt(a) + parseInt(b) + parseInt(c)) /
+3;</tt>
+<br><tt>&nbsp; alert ("Doing average of " + a + ", " + b</tt>
+<br><tt>&nbsp;&nbsp; + ", and " + c);</tt>
+<br><tt>&nbsp; alert("Answer is " + answer);</tt>
+<br><tt>&nbsp; var product = a * b * c;</tt>
+<br><tt>&nbsp; alert("But the product is " + product);</tt>
+<br><tt>&nbsp;}</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;body></tt>
+<br><tt>&lt;center> Calculating average and product &lt;/center></tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;form></tt>
+<br><tt>&nbsp;Enter number 1: &lt;input type=text name=num1></tt>
+<br><tt>&nbsp;&lt;br> Enter number 2: &lt;input type=text name=num2></tt>
+<br><tt>&nbsp;&lt;br> Enter number 3: &lt;input type=text name=num3></tt>
+<br><tt>&nbsp;&lt;p></tt>
+<br><tt>&nbsp;&lt;input type=button value="Click Me"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; onClick="average(num1.value,
+num2.value, num3.value);"></tt>
+<br><tt>&lt;/form></tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;a href="js2.htm#ex8"> Go Back &lt;/a></tt>
+<br><tt>&lt;/body></tt>
+<br><tt>&lt;/html></tt><tt></tt>
+<p>Notice that the call of the function passes the value property of the
+textfield's to the function.
+<p>
+<hr WIDTH="100%">
+<p>A function can also have a return value. We can also set the value property
+(or any property) of an input object inside programming code, as is done
+in the&nbsp;<a NAME="ex9"></a><a href="ex9.htm">following example</a>:
+<p><tt>&lt;html></tt>
+<br><tt>&lt;head></tt>
+<br><tt>&nbsp;&nbsp;&nbsp; &lt;title>Example 9&lt;/title></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;function average(a, b, c)</tt>
+<br><tt>&nbsp;{</tt>
+<br><tt>&nbsp; var answer = (parseInt(a) + parseInt(b) + parseInt(c)) /
+3;</tt>
+<br><tt>&nbsp; return answer;</tt>
+<br><tt>&nbsp;}</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;body></tt>
+<br><tt>&lt;center> Calculating average&lt;/center></tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;form></tt>
+<br><tt>&nbsp;Enter number 1: &lt;input type=text name=num1 size=6></tt>
+<br><tt>&nbsp;&lt;br> Enter number 2: &lt;input type=text name=num2 size=6></tt>
+<br><tt>&nbsp;&lt;br> Enter number 3: &lt;input type=text name=num3 size=6></tt>
+<br><tt>&nbsp;&lt;br> Average is: &lt;input type=text name=answer size=6></tt>
+<br><tt>&nbsp;&lt;p></tt>
+<br><tt>&nbsp;&lt;input type=button value="Get Average"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; onClick="answer.value=average(num1.value,
+num2.value, num3.value);"></tt>
+<br><tt>&lt;/form></tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;a href="js2.htm#ex9"> Go Back &lt;/a></tt>
+<br><tt>&lt;/body></tt>
+<br><tt>&lt;/html></tt>
+<p>
+<hr WIDTH="100%">
+<p>You can also pass a form element to a function, as in the&nbsp;<a NAME="ex10"></a><a href="ex10.htm">next
+example</a>:
+<p><tt>&lt;html></tt>
+<br><tt>&lt;head></tt>
+<br><tt>&nbsp;&nbsp;&nbsp; &lt;title>Example 10&lt;/title></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;function average(a, b, c,answer)</tt>
+<br><tt>&nbsp;{</tt>
+<br><tt>&nbsp; answer.value = (parseInt(a) + parseInt(b) + parseInt(c))
+/ 3;</tt><tt></tt>
+<p><tt>&nbsp;}</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;body></tt>
+<br><tt>&lt;center> Calculating average&lt;/center></tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;form></tt>
+<br><tt>&nbsp;Enter number 1: &lt;input type=text name=num1 size=6></tt>
+<br><tt>&nbsp;&lt;br> Enter number 2: &lt;input type=text name=num2 size=6></tt>
+<br><tt>&nbsp;&lt;br> Enter number 3: &lt;input type=text name=num3 size=6></tt>
+<br><tt>&nbsp;&lt;br> Average is: &lt;input type=text name=answer size=6></tt>
+<br><tt>&nbsp;&lt;p></tt>
+<br><tt>&nbsp;&lt;input type=button value="Get Average"</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; onClick="average(num1.value,
+num2.value, num3.value, answer);"></tt>
+<br><tt>&lt;/form></tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;a href="js2.htm#ex9"> Go Back &lt;/a></tt>
+<br><tt>&lt;/body></tt>
+<br><tt>&lt;/html></tt><tt></tt>
+<p>As you can see, you can either pass a property of a form element, or
+the form element itself to a function.
+<p>
+<hr WIDTH="100%">
+<p>You can even pass the entire form to the function if you wish, as in
+the&nbsp;<a NAME="ex11"></a><a href="ex11.htm">next example</a>:
+<p><tt>&lt;html></tt>
+<br><tt>&lt;head></tt>
+<br><tt>&nbsp;&nbsp;&nbsp; &lt;title>Example 11&lt;/title></tt>
+<br><tt>&lt;/head></tt>
+<br><tt>&lt;script></tt>
+<br><tt>&nbsp;function average(myform)</tt>
+<br><tt>&nbsp;{</tt>
+<br><tt>&nbsp; myform.answer.value = (parseInt(myform.num1.value) +</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+parseInt(myform.num2.value) +</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+parseInt(myform.num3.value)) / 3;</tt><tt></tt>
+<p><tt>&nbsp;}</tt>
+<br><tt>&lt;/script></tt>
+<br><tt>&lt;body></tt>
+<br><tt>&lt;center> Calculating average&lt;/center></tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;form name=thisform></tt>
+<br><tt>&nbsp;Enter number 1: &lt;input type=text name=num1 size=6></tt>
+<br><tt>&nbsp;&lt;br> Enter number 2: &lt;input type=text name=num2 size=6></tt>
+<br><tt>&nbsp;&lt;br> Enter number 3: &lt;input type=text name=num3 size=6></tt>
+<br><tt>&nbsp;&lt;br> Average is: &lt;input type=text name=answer size=6></tt>
+<br><tt>&nbsp;&lt;p></tt>
+<br><tt>&nbsp;&lt;input type=button value="Get Average" onClick="average(thisform);"></tt>
+<br><tt>&lt;/form></tt>
+<br><tt>&lt;p></tt>
+<br><tt>&lt;a href="js2.htm#ex11"> Go Back &lt;/a></tt>
+<br><tt>&lt;/body></tt>
+<br><tt>&lt;/html></tt><tt></tt>
+<p>If the form is to be an argument, it must have a name.
+</body>
+</html>
