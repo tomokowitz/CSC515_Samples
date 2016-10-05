@@ -1,0 +1,21 @@
+﻿<html>
+
+<head>
+<title>Untitled 1</title>
+<script>
+  function function1()
+  { 
+    top.frames[1].document.form1.text1.value = document.form1.text1.value;
+  }
+</script>
+</head>
+
+<body>
+Left Frame
+<form name="form1">
+ <input type="text" name="text1" onkeyup="function1()">
+ <input type="button" value="Click me" onclick="window2=parent.open('ex2d.htm')">
+</form>
+</body>
+
+</html>

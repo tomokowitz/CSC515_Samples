@@ -1,0 +1,141 @@
+<html>
+<head>
+   <title>Example 4</title>
+<script>
+
+function gender(radio, life)
+{
+  if (radio[0].checked)
+  {
+      life.value = 75;
+  }
+  if (radio[1].checked)
+  {
+      life.value = 80;
+  }
+}
+   
+function smoker(radio, life)
+{
+  if (radio[0].checked)
+  {
+      life.value = parseInt(life.value) + 5;
+  }
+  if (radio[1].checked)
+  {
+      life.value = parseInt(life.value) - 2;
+  }
+  if (radio[2].checked)
+  {
+      life.value = parseInt(life.value) - 5;
+  }
+}
+
+function exercise(radio, life)
+{
+  if (radio[0].checked)
+  {
+      life.value = parseInt(life.value) - 5;
+  }
+  if (radio[1].checked)
+  {
+      life.value = parseInt(life.value) - 2;
+  }
+  if (radio[2].checked)
+  {
+      life.value = parseInt(life.value) + 2;
+  }
+  if (radio[3].checked)
+  {
+      life.value = parseInt(life.value) + 5;
+  }
+}
+
+function checkbox(cb, life)
+{
+  if (cb.checked)
+  {
+      life.value = parseInt(life.value) - 10;
+  }
+}
+
+function drivestyle(options, life)
+{
+  if (options.selectedIndex == 0)
+  {
+      life.value = parseInt(life.value) + 2;
+  }
+  if (options.selectedIndex == 1)
+  {
+      life.value = parseInt(life.value) - 1;
+  }
+  if (options.selectedIndex == 2)
+  {
+      life.value = parseInt(life.value) - 10;
+  }
+}
+
+function calculateExpectancy(form1)
+{
+	gender(form1.set1, form1.life);
+	smoker(form1.set2, form1.life);
+	exercise(form1.set3, form1.life);
+	checkbox(form1.cb1, form1.life);
+	checkbox(form1.cb2, form1.life);
+	checkbox(form1.cb3, form1.life);
+	checkbox(form1.cb4, form1.life);
+	drivestyle(form1.driving, form1.life);
+}
+</script>
+</head>
+<body bgcolor="#FFFF80">
+<center>
+<font size=+2>Calculate Your Life Expectancy!</font>(version 2)
+<br>But don't be too alarmed. Bogus numbers!
+</center>
+<p>
+<form NAME="form1">
+Are you male or female?
+<br><input TYPE="radio" NAME="set1" VALUE="Male" CHECKED>Male
+<br><input TYPE="radio" NAME="set1" VALUE="Female">Female
+<p>
+Which best describes your smoking?
+<br><input TYPE="radio" NAME="set2" VALUE="Never" CHECKED>Never Smoked
+<br><input TYPE="radio" NAME="set2" VALUE="Stopped">Quit
+<br><input TYPE="radio" NAME="set2" VALUE="Still">Still Smoke
+<p>How much do you exercise per week?
+<br><input TYPE="radio" NAME="set3" VALUE="Never" CHECKED>
+Less than 30 minutes per week.
+<br><input TYPE="radio" NAME="set3" VALUE="Occ">
+Less than 2 hours per week
+<br><input TYPE="radio" NAME="set3" VALUE="Often">
+Between 2 and 4 hours per week
+<br><input TYPE="radio" NAME="set3" VALUE="Lots">
+More than 4 hours per week
+<p>Which of the following are true?
+<br><input TYPE="checkbox" NAME="cb1">
+You drink more than 7 drinks per week.
+<br><input TYPE="checkbox" NAME="cb2">
+You take intravenous drugs.
+<br><input TYPE="checkbox" NAME="cb3">
+You are bulimic.
+<br><input TYPE="checkbox" NAME="cb4">
+You take steroids.
+<p>
+Which best describes your attitude when you drive?
+<select name="driving">
+<option> Happy
+<option> Anxious
+<option> Angry
+</select>
+<p>
+<input TYPE="button" NAME="button1" VALUE="Calculate Life Expectancy"
+  onClick="calculateExpectancy(form1)";>
+<input TYPE="reset" NAME="button2" VALUE="Reset">
+<p>
+Life Expectancy:&nbsp;
+<input TYPE="text" NAME="life" VALUE="">
+</form>
+<p><a href="js5.htm#ex4">Go Back</a>
+</body>
+</html>

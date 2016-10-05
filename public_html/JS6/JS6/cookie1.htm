@@ -1,0 +1,49 @@
+﻿<html>
+<head>
+<title> Make Cookie </title>
+<script>
+function makeCookie(f1)
+{
+	var todaysDate = new Date();
+	todaysDate.setDate(todaysDate.getDate() + 30);
+	document.cookie= "money=" + f1.money.value + 
+			"; expires=" +
+			 todaysDate.toGMTString() + ";";
+	document.cookie= "user=" + f1.user.value + 
+			"; expires=" +
+			 todaysDate.toGMTString() + ";";
+	alert(document.cookie);
+}
+function readCookie(f1)
+{
+	alert(document.cookie);
+	var temp = document.cookie;
+	a = temp.split("; ");
+	for (i = 0; i < a.length; i++)
+		alert(a[i]);
+	for (i=0; i < a.length; i++)
+	{
+		pos = a[i].indexOf("=");
+		if (a[i].substring(0,pos) == "money")
+			f1.money.value=a[i].substring(pos+1);
+		if (a[i].substring(0,pos) == "user")
+			f1.user.value=a[i].substring(pos+1);
+	}
+}
+</script>
+</head>
+<body>
+<form name="form1">
+Name:
+<input type=text name="user" value="">
+<P>
+Money:
+<input type=text name="money" value="">
+<p>
+<input type=button value="Load Cookie" onClick="readCookie(document.form1);">
+<p>
+<input type=button value="Save Cookie" onClick="makeCookie(document.form1);">
+
+</form>
+</body>
+</html>

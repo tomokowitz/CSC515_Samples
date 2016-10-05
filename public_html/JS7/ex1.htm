@@ -1,0 +1,33 @@
+﻿<html>
+<head>
+    <title>Example 1</title>
+<script>
+	function getFactorial()
+	{
+		var x = prompt("Enter an integer","");
+		if (x == null)
+			alert("Don't hit the Cancel!");
+		else if (parseInt(x) != x)
+		    alert("Not an integer");
+		else 
+		{
+			answer = 1;
+			for (i = 1; i <= x; i++)
+			{
+				answer = answer * i;
+			}
+			alert (x + " factorial is " + answer);
+		}
+	}
+</script>
+</head>
+<body>
+<form>
+<br> <input type="button" value="Play Craps" onClick="window.open('ex10.htm','PlayCraps');">
+<br> <input type="button" value="Astrology" onClick="window.open('ex9.htm','Astrology')">
+<br> <input type="button" value="Get Factorial" onClick="getFactorial()">
+</form>
+<p>
+<a href="js3.htm#ex8"> Go Back </a>
+</body>
+</html>

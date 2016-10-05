@@ -1,0 +1,89 @@
+<html>
+<head>
+   <title>Example 2</title>
+
+<script>
+
+function randomnumber10()
+{
+  return Math.ceil(Math.random()*5 + 5);
+}
+
+function randomnumber20()
+{
+  return Math.ceil(Math.random()*10 + 10);
+}
+
+function randomnumber5()
+{
+  return Math.ceil(Math.random()*5);
+}
+
+function randomnumber(radio)
+{
+  if (radio[0].checked)
+  {
+      return randomnumber5();
+  }
+  if (radio[1].checked)
+  {
+      return randomnumber10();
+  }
+  if (radio[2].checked)
+  {
+      return randomnumber20();
+  }
+}
+   
+function testSolution(a, b, c, d, e)
+{
+  if (a * b == c)
+  {
+     d.value++;
+     return "Correct!"
+  }
+  else
+  {
+     e.value++;
+     return "Wrong!"
+  }
+}
+
+function getproblem(level)
+{
+	document.form1.number1.value = randomnumber(level);
+	document.form1.number2.value = randomnumber(level);
+        document.form1.answer.value = ""
+        document.form1.feedback.value = ""
+}
+
+</script>
+
+</head>
+<body onload="getproblem(document.form1.level);">
+<form NAME="form1">Choose a level:
+<br><input TYPE="radio" NAME="level" VALUE="Easy" CHECKED>Easy
+<br><input TYPE="radio" NAME="level" VALUE="Medium">Medium
+<br><input TYPE="radio" NAME="level" VALUE="Hard">Hard
+<p>
+<input TYPE="text" NAME="number1">
+*
+<input TYPE="text" NAME="number2">
+=
+<input TYPE="text" NAME="answer">
+<p>
+<input TYPE="button" NAME="button1" VALUE="Get Problem"
+  onClick="getproblem(document.form1.level);">
+<input TYPE="button" NAME="button2" VALUE="Test Solution"
+  onClick="feedback.value=testSolution(number1.value, number2.value, answer.value, right, wrong)">
+<p>
+<input TYPE="text" NAME="feedback">
+<p>
+Right:&nbsp;
+<input TYPE="text" NAME="right" VALUE="0">
+Wrong:&nbsp;
+<input TYPE="text" NAME="wrong" VALUE="0">
+</form>
+<p><a href="js5.htm#ex2">Go Back</a>
+</body>
+</html>

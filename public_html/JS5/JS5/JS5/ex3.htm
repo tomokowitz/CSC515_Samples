@@ -1,0 +1,91 @@
+<html>
+<head>
+   <title>Example 3</title>
+<script>
+
+function gender(radio)
+{
+  if (radio[0].checked)
+  {
+      return 75;
+  }
+  if (radio[1].checked)
+  {
+      return 80;
+  }
+}
+   
+function smoker(radio)
+{
+  if (radio[0].checked)
+  {
+      return 5;
+  }
+  if (radio[1].checked)
+  {
+      return -2;
+  }
+  if (radio[2].checked)
+  {
+      return -5;
+  }
+}
+
+function exercise(radio)
+{
+  if (radio[0].checked)
+  {
+      return -5;
+  }
+  if (radio[1].checked)
+  {
+      return -2;
+  }
+  if (radio[2].checked)
+  {
+      return 2;
+  }
+  if (radio[3].checked)
+  {
+      return 5;
+  }
+}
+
+</script>
+</head>
+<body bgcolor="#FFFF80">
+<center>
+<font size=+2>Calculate Your Life Expectancy!</font>
+<br>But don't be too alarmed. Bogus numbers!
+</center>
+<p>
+<form NAME="form1">
+Are you male or female?
+<br><input TYPE="radio" NAME="set1" VALUE="Male" CHECKED>Male
+<br><input TYPE="radio" NAME="set1" VALUE="Female">Female
+<p>
+Which best describes your smoking?
+<br><input TYPE="radio" NAME="set2" VALUE="Never" CHECKED>Never Smoked
+<br><input TYPE="radio" NAME="set2" VALUE="Stopped">Quit
+<br><input TYPE="radio" NAME="set2" VALUE="Still">Still Smoke
+<p>
+How much do you exercise per week?
+<br><input TYPE="radio" NAME="set3" VALUE="Never" CHECKED>Less than 30
+minutes per week.
+<br><input TYPE="radio" NAME="set3" VALUE="Occ">Less than 2 hours per week
+<br><input TYPE="radio" NAME="set3" VALUE="Often">Between 2 and 4 hours
+per week
+<br><input TYPE="radio" NAME="set3" VALUE="Lots">More than 4 hours per
+week
+<p>
+<input TYPE="button" NAME="button1" VALUE="Calculate Life Expectancy"
+  onClick="life.value = gender(set1) + smoker(set2) + exercise(set3) ;
+          ">
+<input TYPE="reset" NAME="button2" VALUE="Reset">
+<p>
+Life Expectancy:&nbsp;
+<input TYPE="text" NAME="life" VALUE="">
+</form>
+<p><a href="js5.htm#ex3">Go Back</a>
+</body>
+</html>

@@ -1,0 +1,1379 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="js6_files/filelist.xml">
+<link rel=Edit-Time-Data href="js6_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>john</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>ETS</o:LastAuthor>
+  <o:Revision>4</o:Revision>
+  <o:TotalTime>5</o:TotalTime>
+  <o:Created>2006-02-23T01:10:00Z</o:Created>
+  <o:LastSaved>2007-02-20T22:26:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>1827</o:Words>
+  <o:Characters>10418</o:Characters>
+  <o:Company>home</o:Company>
+  <o:Lines>86</o:Lines>
+  <o:Paragraphs>24</o:Paragraphs>
+  <o:CharactersWithSpaces>12221</o:CharactersWithSpaces>
+  <o:Version>11.6408</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+tt
+	{font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=blue style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:13.5pt'>More on Forms</span></p>
+
+<p>Let's think about form elements in a more formal way. </p>
+
+<p>You can refer to a form element either by its name (<span class=SpellE>form.name</span>)
+or as an element of an elements array that is a property of a form. Forms also
+have a length property, which is the length of the elements array. </p>
+
+<p>The properties of the Element object (a &quot;super-object&quot;, which
+includes what is common for each particular form element) include: <br>
+&nbsp; <br>
+&nbsp; </p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 style='mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>checked</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>A read/write Boolean that indicates the selection state of
+  form elements that can either be &quot;checked&quot; or
+  &quot;unchecked&quot;.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>defaultChecked</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>A read-only Boolean that specifies the default state of a
+  form element that can be &quot;checked&quot;.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>defaultValue</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>A read-only string <span class=GramE>the defines</span>
+  the default value.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>form</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=GramE>A reference to the Form object</span>
+  that contains this element.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>length</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>For the Select form element, the number of options
+  contained in the options array.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>name</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>A read-only string that specifies the name of the object.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>options[]</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>For the Select form element, the Option objects that are
+  the choices.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>selectedIndex</span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>For the Select form element. Read/write in Netscape, Read
+  only in Internet Explorer. Specifies which option selected.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>type</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>A read-only string that specifies the type of the form
+  element.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>value</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>The value of the object (submitted to the server).</p>
+  </td>
+ </tr>
+</table>
+
+<p>The methods of an Element include: <br>
+&nbsp; </p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 style='mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>blur()</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Remove keyboard focus from an object.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>click()</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Simulates a mouse click on the form element.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>focus()</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Give keyboard focus to the element.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>select()</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>For form elements that display editable text, select the
+  text that appears in the element.</p>
+  </td>
+ </tr>
+</table>
+
+<p>And the event handlers for an Element include: <br>
+&nbsp; <br>
+&nbsp; </p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 style='mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>onblur</span>()</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Called when the user takes keyboard focus from the element<span
+  class=GramE>..</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>onclick</span>()</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>For form elements that are buttons; called when the user
+  clicks the button.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>onfocus</span>()</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Called when the user takes keyboard focus from the element<span
+  class=GramE>..</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>onchange</span>()</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>For form elements that are not buttons; called when the
+  user enters or selects a new value<span class=GramE>..</span></p>
+  </td>
+ </tr>
+</table>
+
+<p>Not all properties, methods, and event handlers apply to all types of form
+elements. </p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>Let's look at the&nbsp;<a name=pizza></a><a href="pizza.htm">following
+example</a>, which displays, one at a time, the name of each form element: </p>
+
+<p>The code for this example is: </p>
+
+<p><tt><span style='font-size:10.0pt'>&lt;HTML&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;HEAD&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;TITLE&gt;Pizza&lt;/TITLE&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>function <span class=SpellE>getElements</span>(form1)</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;<span class=SpellE>var</span> <span
+class=SpellE>i</span>;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;for (<span class=SpellE>i</span> = 0; <span
+class=SpellE>i</span> &lt; form1.length; <span class=SpellE>i</span>++)</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp; alert(&quot;Element:&quot; + <span
+class=SpellE>i</span> + &quot;\n&quot; +</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;Name:&quot;
++ form1.elements[<span class=SpellE>i</span>].name + &quot;\n&quot; +</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&quot;Type:&quot; + form1.elements[<span class=SpellE>i</span>].type);</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;}</span></tt> <br>
+<tt><span style='font-size:10.0pt'>}</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/HEAD&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;BODY BGCOLOR=&quot;#FFFF80&quot;&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;form NAME=&quot;form1&quot;&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;center&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>John's Pizza Company!</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;BR&gt;</span></tt> <br>
+<span class=GramE><tt><span style='font-size:10.0pt'>Choose</span></tt></span><tt><span
+style='font-size:10.0pt'> your size and toppings, click your zip code, and type
+your directions!</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/center&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;P&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;! Here's a drop-down list&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;SELECT NAME=&quot;size&quot;&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;option VALUE=&quot;medium&quot;&gt;
+Medium</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;option SELECTED
+VALUE=&quot;large&quot;&gt; Large</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;option VALUE=&quot;extra large&quot;&gt;
+Extra Large</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/SELECT&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;P&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;! Here are check boxes&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;INPUT TYPE=&quot;checkbox&quot;
+NAME=&quot;check1&quot; VALUE=&quot;mushroom&quot; CHECKED&gt; Mushroom</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;BR&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;INPUT TYPE=&quot;checkbox&quot;
+NAME=&quot;check2&quot; VALUE=&quot;pepper&quot; CHECKED&gt; Pepper</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;BR&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;INPUT TYPE=&quot;checkbox&quot;
+NAME=&quot;check3&quot; VALUE=&quot;sausage&quot;&gt; Sausage</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;BR&gt;&lt;INPUT
+TYPE=&quot;checkbox&quot; NAME=&quot;check4&quot; VALUE=&quot;pepperoni&quot;&gt;
+Pepperoni</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;BR&gt;&lt;INPUT
+TYPE=&quot;checkbox&quot; NAME=&quot;check5&quot;
+VALUE=&quot;pineapple&quot;&gt; Pineapple</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;BR&gt;&lt;INPUT
+TYPE=&quot;checkbox&quot; NAME=&quot;check6&quot;
+VALUE=&quot;eggplant&quot;&gt; Eggplant</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>Enter your phone number:</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;! Here's a text field&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;INPUT TYPE=&quot;text&quot;
+NAME=&quot;phone&quot; VALUE=&quot;999-9999&quot;&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;P&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>Choose your zip code:</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;<span class=SpellE>br</span>&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;! Here are radio buttons&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;INPUT TYPE=&quot;radio&quot;
+NAME=&quot;zip&quot; VALUE=&quot;12206&quot; CHECKED&gt; 12206</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;INPUT TYPE=&quot;radio&quot;
+NAME=&quot;zip&quot; VALUE=&quot;12208&quot;&gt; 12208</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;INPUT TYPE=&quot;radio&quot;
+NAME=&quot;zip&quot; VALUE=&quot;12210&quot;&gt; 12210</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;INPUT TYPE=&quot;radio&quot;
+NAME=&quot;zip&quot; VALUE=&quot;12212&quot;&gt; 12212</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;! Here is a text area&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;TEXTAREA NAME=textarea1
+ROWS=&quot;6&quot; COLS=&quot;50&quot; WRAP=&quot;virtual&quot;&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>12206 Enter directions here:</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/TEXTAREA&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;P&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;INPUT TYPE=&quot;reset&quot; NAME=reset1
+VALUE=&quot;Clear Form&quot;&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;INPUT TYPE=&quot;button&quot; NAME=&quot;submit1&quot;
+VALUE=&quot;get elements&quot;</span></tt> <br>
+<span class=SpellE><tt><span style='font-size:10.0pt'>onClick</span></tt></span><tt><span
+style='font-size:10.0pt'>=&quot;<span class=SpellE><span class=GramE>getElements</span></span><span
+class=GramE>(</span>form1);&quot;&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/form&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/BODY&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/HTML&gt;</span></tt> </p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>Here's&nbsp;<a name=ex2></a><a href="ex2.htm">another example</a>. Choosing
+an option from the select loads a different picture, changes the price per
+flower, and changes the total. Changing the number of flowers ordered changed
+the total. </p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;HTML&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;HEAD&gt;<span
+style='mso-spacerun:yes'>   </span><o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;TITLE&gt;Example
+2&lt;/TITLE&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;<span class=GramE>script</span>&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><tt><span
+style='font-size:10.0pt'>var</span></tt></span></span><tt><span
+style='font-size:10.0pt'> Prices = new Array(&quot;$10&quot;, &quot;$15&quot;,
+&quot;$20&quot;, &quot;$5&quot;);<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><span class=GramE><tt><span style='font-size:10.0pt'>function</span></tt></span><tt><span
+style='font-size:10.0pt'> <span class=SpellE>dochange</span>()<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>{<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'><span style='mso-tab-count:
+1'>      </span><span class=SpellE><span class=GramE>var</span></span> index =
+document.form1.flower.selectedIndex;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'><span style='mso-tab-count:
+1'>      </span><span class=SpellE>document.mypic.src</span>=document.form1.flower.value;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'><span style='mso-tab-count:
+1'>      </span>document.form1.price.value = <span class=GramE>Prices[</span>index];<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'><span style='mso-tab-count:
+1'>      </span><span class=SpellE><span class=GramE>var</span></span> price =
+Prices[index].substring(1);<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'><span style='mso-tab-count:
+1'>      </span><span class=SpellE><span class=GramE>var</span></span> <span
+class=SpellE>quantityIndex</span> = document.form1.ordered.selectedIndex;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'><span style='mso-tab-count:
+1'>      </span>document.form1.total.value = &quot;$&quot; + price *
+document.form1.ordered.value;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>}<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;/script&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;/HEAD&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;BODY&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;form
+NAME=&quot;form1&quot;&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;SELECT
+NAME=&quot;flower&quot; <span class=SpellE>onchange</span>=&quot;<span
+class=SpellE><span class=GramE>dochange</span></span><span class=GramE>(</span>);&quot;&gt;<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;option SELECTED
+VALUE=&quot;flower1.gif&quot;&gt; Flower 1<span style='mso-spacerun:yes'> 
+</span><o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;option
+VALUE=&quot;flower2.gif&quot;&gt; Flower 2<span style='mso-spacerun:yes'> 
+</span><o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;option
+VALUE=&quot;flower3.gif&quot;&gt; Flower 3<span style='mso-spacerun:yes'> 
+</span><o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;option
+VALUE=&quot;flower4.gif&quot;&gt; Flower 4<span style='mso-spacerun:yes'> 
+</span><o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;/SELECT&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;p&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;<span class=SpellE>img</span>
+name=&quot;<span class=SpellE>mypic</span>&quot; <span class=SpellE>src</span>=&quot;flower1.gif&quot;
+width=100 height=100&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;p&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>Price per flower: <o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;input
+type=&quot;text&quot; value=&quot;$10&quot; name=&quot;price&quot;&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;p&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>Number Ordered: <o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;select
+name=&quot;ordered&quot; <span class=SpellE>onchange</span>=&quot;<span
+class=SpellE><span class=GramE>dochange</span></span><span class=GramE>(</span>);&quot;&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;option SELECTED
+VALUE=&quot;1&quot;&gt; 1<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;option
+VALUE=&quot;2&quot;&gt; 2<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;option
+VALUE=&quot;3&quot;&gt; 3<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;option
+VALUE=&quot;4&quot;&gt; 4 <o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;option
+VALUE=&quot;5&quot;&gt; 5 <o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;option
+VALUE=&quot;6&quot;&gt; 6 <o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;/select&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;p&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>Total Value:<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;input
+type=&quot;text&quot; value=&quot;&quot; name=&quot;total&quot;&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;/form&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;p&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;a <span class=SpellE>href</span>=&quot;js6.htm#ex2&quot;&gt;
+Go Back &lt;/a&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;/BODY&gt;<o:p></o:p></span></tt></p>
+
+<p class=MsoNormal><tt><span style='font-size:10.0pt'>&lt;/HTML&gt;</span></tt><o:p></o:p></p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>How would we write code to change the URL of the current window by choosing
+an item from a Select? </p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>Besides making use of Element methods and properties, the previous example
+also used a method of the String object. Here's a fuller listing for String: </p>
+
+<p>Constructor: <br>
+&nbsp; </p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 style='mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>String(value)</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Constructors a new String object.</p>
+  </td>
+ </tr>
+</table>
+
+<p>Property: <br>
+&nbsp; </p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 style='mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>length</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>The number of characters in the String.</p>
+  </td>
+ </tr>
+</table>
+
+<p>Methods: <br>
+&nbsp; <br>
+&nbsp; </p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 style='mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>anchor(Name)</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Returns a copy of the string, using Name as the anchor
+  name. <br>
+  Same as &lt;A NAME=&quot;Name&quot;&gt; string &lt;/A&gt;</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>big()</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Returns a copy of the string within a &lt;BIG&gt;
+  container.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>blink()</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Returns a copy of the string within a &lt;BLINK&gt;
+  container.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>bold()</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Returns a copy of the string within a &lt;B&gt; container</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>charAt</span>(index)</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Returns the character at the index position.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>fixed()</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Returns the string within a &lt;TT&gt; container.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>fontcolor</span>(color)</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Returns the string within a &lt;FONT COLOR=color&gt;
+  container.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>fontsize</span>(size)</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Returns a copy of the string within a &lt;FONT
+  SIZE=size&gt; container</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>indexOf</span>(substring[,start])</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Returns the position of the first occurrence of substring,
+  starting at start. Or -1.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>italics()</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Returns a copy of the string within an &lt;I&gt; container</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>lastIndexOf</span>(substring[,start])</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Returns the position of the last occurrence of substring,
+  starting at start. Or -1.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>link(<span class=SpellE>href</span>)</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Returns a copy of the string within an &lt;A HREF=<span
+  class=SpellE>href</span>&gt; container.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>small()</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Returns the string within a &lt;SMALL&gt; container</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>split(delimiter)</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Returns an array of strings created by splitting the
+  string into substrings at delimiter boundaries.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>strike()</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Returns the string within a &lt;STRIKE&gt; container</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>sub()</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Returns the string within a &lt;SUB&gt; container</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>substring(from [,to])</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Returns a substring starting at position from, and ending
+  one before position to.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>sup()</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Returns the string within a &lt;SUP&gt; container</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>toLowerCase</span>()</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Returns the lower case version of the string.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>toUpperCase</span>()</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Returns the upper case version of the string.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>toString</span>()</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Returns the string.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:21;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>eval</span>(String)</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Evaluates code within the string.</p>
+  </td>
+ </tr>
+</table>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p class=MsoNormal><br>
+Let's start by&nbsp;<a name=ex3></a><a href="ex3.htm">looking at code</a> that
+uses the <span class=SpellE><span class=GramE>eval</span></span><span
+class=GramE>(</span>) method. </p>
+
+<p><tt><span style='font-size:10.0pt'>&lt;HTML&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;HEAD&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;TITLE&gt;Example 3&lt;/TITLE&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>function evaluate()</span></tt> <br>
+<tt><span style='font-size:10.0pt'>{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;<span class=SpellE>var</span>
+expression = prompt(&quot;Enter a numeric expression&quot;,&quot;&quot;);</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&nbsp;alert(&quot;Expression is: &quot; +
+expression);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;alert(&quot;Answer is: &quot; + (<span
+class=SpellE>eval</span>(expression)) );</span></tt> <br>
+<tt><span style='font-size:10.0pt'>}</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/HEAD&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;BODY&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;form NAME=&quot;form1&quot;&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;input type=&quot;button&quot;
+value=&quot;hit me&quot; <span class=SpellE>onClick</span>=&quot;evaluate()&quot;&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;a <span class=SpellE>href</span>=&quot;js6.htm#ex3&quot;&gt;
+Go Back &lt;/a&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/BODY&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/HTML&gt;</span></tt> </p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>Many of the String methods are especially useful if you're writing code that
+is printed inside another window. Look at the&nbsp;<a name=ex4></a><a
+href="ex4.htm">following example</a>. </p>
+
+<p><tt><span style='font-size:10.0pt'>&lt;HTML&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;HEAD&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;TITLE&gt;Example 4&lt;/TITLE&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>function <span class=SpellE>makeNew</span>()</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>{</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;<span class=SpellE>var</span> you =
+prompt(&quot;Who are you&quot;,&quot;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;<span class=SpellE>var</span> <span
+class=SpellE>url</span> = prompt(&quot;Enter your home page&quot;,
+&quot;http:&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;window2 =
+open(&quot;&quot;,&quot;second&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;window2.document.writeln(&quot;Hi
+&quot; + <span class=SpellE>you.bold</span>().<span class=SpellE>fontcolor</span>(&quot;red&quot;)
++ &quot;!&lt;p&gt;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;<span class=SpellE>var</span> text1 =
+&quot;Go to home page&quot;;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&nbsp;window2.document.writeln(text1.link(<span
+class=SpellE>url</span>) + &quot;&lt;P&gt;&quot;);</span></tt> <br>
+<tt><span style='font-size:10.0pt'>}</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/script&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/HEAD&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;BODY&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;form NAME=&quot;form1&quot;&gt;</span></tt>
+<br>
+<tt><span style='font-size:10.0pt'>&lt;input type=&quot;button&quot;
+value=&quot;Make new page&quot; <span class=SpellE>onClick</span>=&quot;<span
+class=SpellE>makeNew</span>()&quot;&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;p&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;a <span class=SpellE>href</span>=&quot;js6.htm#ex4&quot;&gt;
+Go Back &lt;/a&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/BODY&gt;</span></tt> <br>
+<tt><span style='font-size:10.0pt'>&lt;/HTML&gt;</span></tt> </p>
+
+<p>To write to another window, you must make sure that there is a &lt;P&gt; or
+&lt;BR&gt; at the end of the string. Otherwise, it won't be written. </p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>As long as we're writing to another window's document, let's consider the
+properties and methods of the Document object: <br>
+&nbsp; <br>
+&nbsp; </p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 style='mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>alinkColor</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>A String that specifies the color of activated links.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>anchors[]</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>An array of Anchor objects; one for each hypertext target
+  in the document.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>anchors.length</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>The length of the anchors array.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>applets[]</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>An array of Java objects.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>applets.length</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>The length of the applets array.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>bgColor</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>A String that specifies the background color.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>cookie</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>A string which is the value of a cookie associated with this
+  document.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>domain</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>The domain name of the server that sent the document.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>embeds[]</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>A list of the &lt;EMBED&gt; tags.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>fgColor</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>A string that specifies the color of the document text.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>forms[]</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>An array of Form objects</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>images[]</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>An array of Image objects.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>lastModified</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>The date the document was last modified.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>linkColor</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>The color of unvisited links.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>links[]</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>An array of Link and Area objects</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>location</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Same as the URL property.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>plugins</span>[]</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Same as <span class=GramE>the embeds</span> property.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>referrer</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>The URL of the document that contained the link to the
+  current document.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>title</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>The title of the document.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>URL</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>A string containing the complete URL of the document. Not
+  in IE.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>vlinkColor</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Color of visited links.</p>
+  </td>
+ </tr>
+</table>
+
+<p>The methods of the Document object are: <br>
+&nbsp; <br>
+&nbsp; </p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 style='mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>clear()</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Clears the contents of the document.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>close()</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Closes a document stream.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>open()</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Opens a document stream.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>write()</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Write to the document or the document stream.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE>writeln</span>()</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+</table>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>Here's&nbsp;<a name=ex5></a><a href="ex5.htm">another example</a>: </p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;HTML&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;HEAD&gt;<span
+style='mso-spacerun:yes'>   </span><o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;TITLE&gt;Example
+5&lt;/TITLE&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;script&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><span class=SpellE><tt><span
+style='font-size:10.0pt'>var</span></tt></span><tt><span style='font-size:10.0pt'>
+Prices = new Array(&quot;$10&quot;, &quot;$15&quot;, &quot;$20&quot;,
+&quot;$5&quot;);<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>function
+<span class=SpellE>dochange</span>()<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>{<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>      </span><span class=SpellE>var</span> index =
+document.form1.flower.selectedIndex;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>      </span><span class=SpellE>document.mypic.src</span>=document.form1.flower.value;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>      </span>document.form1.price.value =
+Prices[index];<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>      </span><span class=SpellE>var</span> price =
+Prices[index].substring(1);<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>      </span><span class=SpellE>var</span> <span
+class=SpellE>quantityIndex</span> = document.form1.ordered.selectedIndex;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>      </span>document.form1.total.value = &quot;$&quot;
++ price * document.form1.ordered.value;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>}<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>function
+<span class=SpellE>placeOrder</span>(f1)<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>{<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>      </span>window2=open(&quot;&quot;,&quot;window2&quot;);<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>      </span>window2.document.open();<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>      </span>window2.document.write(&quot;&lt;HTML&gt;&quot;);<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>      </span>window2.document.write(&quot;&lt;HEAD&gt;&quot;);<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>      </span>window2.document.write(&quot;&lt;TITLE&gt;
+Order &lt;/TITLE&gt;&quot;);<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>      </span>window2.document.write(&quot;&lt;/HEAD&gt;&quot;);<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>      </span>window2.document.write(&quot;&lt;BODY
+BGCOLOR='red'&gt;&quot;);<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>      </span>window2.document.write(&quot;&lt;IMG
+SRC=&quot; + <span class=SpellE>document.mypic.src</span>
++&quot;&gt;&lt;P&gt;&quot;);<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>      </span>window2.document.write(&quot;Total cost is
+&quot; + f1.total.value.big() + &quot;&lt;p&gt;&quot;);<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>      </span>window2.document.write(&quot;&lt;FORM&gt;&quot;);<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>      </span>window2.document.write(&quot;&lt;INPUT
+TYPE='button' VALUE='Close' <span class=SpellE>onClick</span>=<span
+class=SpellE>self.close</span>();&gt;&quot;);<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>      </span>window2.document.write(&quot;&lt;P&gt;&quot;);<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>      </span>window2.document.write(&quot;&lt;/BODY&gt;&quot;);<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>      </span>window2.document.write(&quot;&lt;/HTML&gt;&quot;);<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>      </span>window2.document.fgColor=&quot;green&quot;;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>      </span>window2.document.bgColor=&quot;yellow&quot;;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'><span
+style='mso-tab-count:1'>      </span>window2.document.close();<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>}<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;/script&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;/HEAD&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;BODY&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;form
+NAME=&quot;form1&quot;&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;SELECT
+NAME=&quot;flower&quot; <span class=SpellE>onchange</span>=&quot;<span
+class=SpellE>dochange</span>();&quot;&gt;<span style='mso-spacerun:yes'> 
+</span><o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;option
+SELECTED VALUE=&quot;flower1.gif&quot;&gt; Flower 1<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;option
+VALUE=&quot;flower2.gif&quot;&gt; Flower 2<span style='mso-spacerun:yes'> 
+</span><o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;option
+VALUE=&quot;flower3.gif&quot;&gt; Flower 3<span style='mso-spacerun:yes'> 
+</span><o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;option
+VALUE=&quot;flower4.gif&quot;&gt; Flower 4<span style='mso-spacerun:yes'> 
+</span><o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;/SELECT&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;p&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;<span
+class=SpellE>img</span> name=&quot;<span class=SpellE>mypic</span>&quot; <span
+class=SpellE>src</span>=&quot;flower1.gif&quot; width=100 height=100&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;p&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>Price
+per flower: <o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;input
+type=&quot;text&quot; value=&quot;$10&quot; name=&quot;price&quot;&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;p&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>Number
+Ordered: <o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;select
+name=&quot;ordered&quot; <span class=SpellE>onchange</span>=&quot;<span
+class=SpellE>dochange</span>();&quot;&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;option
+SELECTED VALUE=&quot;1&quot;&gt; 1<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;option
+VALUE=&quot;2&quot;&gt; 2<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;option
+VALUE=&quot;3&quot;&gt; 3<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;option
+VALUE=&quot;4&quot;&gt; 4 <o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;option
+VALUE=&quot;5&quot;&gt; 5 <o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;option
+VALUE=&quot;6&quot;&gt; 6 <o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;/select&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;p&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>Total
+Value:<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;input
+type=&quot;text&quot; value=&quot;&quot; name=&quot;total&quot;&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;p&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;input
+type=&quot;button&quot; value=&quot;Place Order&quot; <span class=SpellE>onClick</span>=&quot;<span
+class=SpellE>placeOrder</span>(document.form1);&quot;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;/form&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;p&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;a
+<span class=SpellE>href</span>=&quot;js6.htm#ex5&quot;&gt; Go Back &lt;/a&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;/BODY&gt;<o:p></o:p></span></tt></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><tt><span style='font-size:10.0pt'>&lt;/HTML&gt;<o:p></o:p></span></tt></p>
+
+</div>
+
+</body>
+
+</html>

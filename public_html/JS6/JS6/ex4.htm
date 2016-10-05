@@ -1,0 +1,22 @@
+﻿<HTML>
+<HEAD>   
+<TITLE>Example 4</TITLE>
+<script>
+function makeNew()
+{
+	var you = prompt("Who are you","");
+	var url = prompt("Enter your home page", "http:");
+	window2 = open("about:blank","second");
+	window2.document.writeln("Hi " + you.bold().fontcolor("red") + "!<p>");
+	var text1 = "Go to home page"; 
+	window2.document.writeln(text1.link(url) + "<P>");
+}
+</script>
+</HEAD>
+<BODY>
+<form NAME="form1">
+<input type="button" value="Make new page" onClick="makeNew()">
+<p>
+<a href="js6.htm#ex4"> Go Back </a>
+</BODY>
+</HTML>
