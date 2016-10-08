@@ -1,0 +1,75 @@
+<html><head><title>Nodes</title>
+<script>
+
+function getObj(elementID)
+{
+  return document.getElementById(elementID);
+}
+
+function emptyNode(elementID)
+{
+  var theNode = getObj(elementID);
+  for (i= theNode.childNodes.length - 1; i >=0; i--)
+  {
+    theNode.removeChild(theNode.childNodes[i]);
+  }
+}
+
+
+var states = new Array('Maine', 'New Hampshire', 'Vermont', 'Massachusetts',
+              'Rhode Island', 'Connecticut', 'New York', 'New Jersey',
+              'Pennsylvania', 'Delaware', 'Maryland');
+var initials = new Array('me', 'nh', 'vt', 'ma', 'ri', 'ct',
+                         'ny', 'nj', 'pa', 'de', 'md');
+
+function changeRegion()
+{
+  if (form1.region.value == "ne")
+  {
+    first = 0; last = 5;
+  }
+  else
+  {
+    first = 6; last = 10;
+  }
+  emptyNode("stateSelect");
+  theNode = getObj("stateSelect");
+  for (i = first; i <= last; i++)
+  {
+
+    var newNode;
+    if (navigator.appName == "Netscape")
+    {
+      newNode = document.createElement("OPTION");
+      newNode.setAttribute("value", initials[i]);
+    }
+    else
+    {
+      var newHTML = "<OPTION value='" + initials[i] + "'>";
+      newNode= document.createElement(newHTML);
+    }
+    theNode.appendChild(newNode);
+    newNode.appendChild(document.createTextNode(states[i]));
+  }
+}
+
+</script>
+</head>
+<body>
+<form name="form1">
+  Choose Region:
+  <select name="region" onChange="changeRegion()">
+    <option value="ne">New England</option>
+    <option value="atl">Mid Atlantic</option>  
+  </select>
+  Choose State:
+  <select name="state" id="stateSelect">
+    <option value="me">Maine</option>
+    <option value="nh">New Hampshire</option>  
+    <option value="vt">Vermont</option>
+    <option value="ma">Massachusetts</option> 
+    <option value="ri">Rhode Island</option>
+    <option value="ct">Connecticut</option> 
+  </select>
+</body>
+</html>

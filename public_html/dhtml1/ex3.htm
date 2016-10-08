@@ -1,0 +1,57 @@
+<html><head><title>Nodes</title>
+<script>
+function getObj(elementID)
+{
+  return document.getElementById(elementID);
+}
+function changeTeam()
+{
+  var theNode = getObj("teams");
+  var newTeam=prompt("Enter a new team","");
+  var index = parseInt(prompt("Enter the position","")) - 1;
+  var newTeamNode=document.createTextNode(newTeam);
+  var newTeamItem = document.createElement("LI");
+  newTeamItem.appendChild(newTeamNode);
+  theNode.replaceChild(newTeamItem, getChild(theNode, index));
+}
+function newTeam()
+{
+  var theNode = getObj("teams");
+  var newTeam=prompt("Enter a new team","");
+  var newTeamNode=document.createTextNode(newTeam);
+  var newTeamItem = document.createElement("LI");
+  newTeamItem.appendChild(newTeamNode);
+  theNode.appendChild(newTeamItem);
+}
+function getChild(node, index)
+// returns the index child of the node
+// ignore text nodes
+{
+  count = -1;
+  for (i = 0; i < node.childNodes.length; i++)
+  {  
+     if (node.childNodes[i].nodeType == 1) // 3 for textnode
+     {
+        count++;
+        if (count == index) 
+          return node.childNodes[i]
+     }
+  }
+}
+</script>
+</head>
+<body>
+<p>
+<! now extra text in the list is OK>
+<ul id="teams">
+  <li> Yankees </li>
+  <li> Mets </li>
+  <li> Red Sox </li>
+</ul>
+</p>
+<p>
+<input type="button" onClick="changeTeam()" value="Change Team">
+<input type="button" onClick="newTeam()" value="New Team">
+</p>
+</body>
+</html>

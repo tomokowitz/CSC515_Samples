@@ -1,0 +1,79 @@
+<html><head><title>More Nodes</title>
+<script>
+function message()
+{
+	var radioNode = getObj("radio");
+	var sloganNode = getObj("slogan");
+	var stylesNode = getObj("styles");
+	emptyNode("slogan");
+	var radioNodes = radioNode.childNodes;
+	for (i = 0; i < radioNodes.length; i++)
+	{
+	  if (radioNodes[i].checked) 
+	    teamname = radioNodes[i].value;
+	}
+	var newText=document.createTextNode("Let's go " + teamname + "!");
+	var index = stylesNode.selectedIndex;
+	switch (index)
+	{
+	  case 0:
+		sloganNode.appendChild(newText);
+		break;
+	  case 1:
+		var boldElem=document.createElement("B");
+		boldElem.appendChild(newText);
+		sloganNode.appendChild(boldElem);
+		break;
+	  case 2:
+		var italicElem=document.createElement("I");
+		italicElem.appendChild(newText);
+		sloganNode.appendChild(italicElem);
+		break;
+	  case 3:
+		var italicElem=document.createElement("I");
+		italicElem.appendChild(newText);
+		sloganNode.appendChild(italicElem);
+		sloganNode.firstChild.style.fontWeight="bold";
+		break;
+	}
+        
+	
+}
+
+function emptyNode(elementID)
+{
+	var theNode = getObj(elementID);
+	for (i= theNode.childNodes.length - 1; i >=0; i--)
+	{
+		theNode.removeChild(theNode.childNodes[i]);
+	}
+}
+
+function getObj(elementID)
+{
+	return document.getElementById(elementID);
+}
+</script>
+</head>
+<body>
+<span id="radio">
+<input type="radio" name="teams" value="Mets" checked onClick="message();"> 
+Mets
+<input type="radio" name="teams" value="Yankees" onClick="message();"> 
+Yankees
+<input type="radio" name="teams" value="Red Sox" onClick="message();"> 
+Red Sox
+</span>
+<p>
+<select id="styles" onChange="message();">
+  <option value="plain"> Plain
+  <option value="bold"> Bold
+  <option value="italics"> Italics
+  <option value="bold italics"> Bold Italics
+</select>
+</p>
+<p id="slogan">
+Let's go Mets!
+</p>
+</body>
+</html>

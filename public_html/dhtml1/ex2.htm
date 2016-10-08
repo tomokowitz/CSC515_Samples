@@ -1,0 +1,61 @@
+﻿<html><head><title>Nodes</title>
+<script>
+function changeGreeting()
+{
+  var theNode = getObj("greeting");
+  var newGreeting=prompt("Type a greeting.","Hello!");
+  theNode.firstChild.nodeValue=newGreeting;
+}
+function getObj(elementID)
+{
+  return document.getElementById(elementID);
+}
+function changeColor()
+{
+  var theNode = getObj("message");
+  var newColor=prompt("Enter a color.","blue");
+  theNode.style.color=newColor;
+}
+function changeBackgroundColor()
+{
+  var theNode = getObj("message");
+  var newColor=prompt("Enter a color.","yellow");
+  theNode.style.backgroundColor=newColor;
+}
+function changeTeam()
+{
+  var theNode = getObj("teams");
+  var newTeam=prompt("Enter a new team","");
+  var index = parseInt(prompt("Enter the position","")) - 1;
+  var newTeamNode=document.createTextNode(newTeam);
+  var newTeamItem = document.createElement("LI");
+  newTeamItem.appendChild(newTeamNode);
+  theNode.replaceChild(newTeamItem, theNode.childNodes[index]);
+}
+function newTeam()
+{
+  var theNode = getObj("teams");
+  var newTeam=prompt("Enter a new team","");
+  var newTeamNode=document.createTextNode(newTeam);
+  var newTeamItem = document.createElement("LI");
+  newTeamItem.appendChild(newTeamNode);
+  theNode.appendChild(newTeamItem);
+}
+</script>
+</head>
+<body>
+<p id="message"><span id="greeting">Hi!</span> I like DHTML.</p>
+<p><input type="button" onClick="changeGreeting()" value="Change Greeting">
+<input type="button" onClick="changeColor()" value="Change Color">
+<input type="button" onClick="changeBackgroundColor()" 
+value="Change Background Color"></p>
+<p>
+<! Be careful of extra text in the list! Even carriage returns count in Firefox>
+<ul id="teams"><li> Yankees </li><li> Mets </li><li> Red Sox </li></ul>
+</p>
+<p>
+<input type="button" onClick="changeTeam()" value="Change Team">
+<input type="button" onClick="newTeam()" value="New Team">
+</p>
+</body>
+</html>

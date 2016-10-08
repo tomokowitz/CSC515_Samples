@@ -1,0 +1,87 @@
+<html><head><title>Nodes</title>
+<script>
+function addPicture()
+{
+  var theNode = getObj("pictures");
+  var filename = getObj("filename").value;
+  var newHTML = "<IMG src='" + filename + "' height='" +
+                 getObj("height").value + "' width='" +
+                 getObj("width").value + "'>";
+  var newNode;
+  alert(newHTML);
+  if (navigator.appName == "Netscape")
+  {
+    newNode = document.createElement("IMG");
+    newNode.setAttribute("src", filename);
+    newNode.setAttribute("height", getObj("height").value);
+    newNode.setAttribute("width", getObj("width").value);
+  }
+  else
+    newNode= document.createElement(newHTML);
+  theNode.appendChild(newNode);
+  theNode.appendChild(document.createElement("BR"));
+  
+}
+function changeBullets()
+{
+  if (document.form1.numbers.checked)
+  {
+    var newList = document.createElement("OL");
+    var oldList = getObj("listP").firstChild;
+    for (i = 0; i < oldList.childNodes.length; i++)
+    { 
+        var templi = document.createElement("LI");
+        var temptext = 
+ document.createTextNode(oldList.childNodes[i].firstChild.nodeValue);
+        templi.appendChild(temptext);
+        newList.appendChild(templi);
+    }
+    var theNode = getObj("listP");
+    theNode.replaceChild(newList, oldList);
+  }
+  else
+  {
+    var newList = document.createElement("UL");
+    var oldList = getObj("listP").firstChild;
+    for (i = 0; i < oldList.childNodes.length; i++)
+    { 
+        var templi = document.createElement("LI");
+        var temptext = 
+ document.createTextNode(oldList.childNodes[i].firstChild.nodeValue);
+        templi.appendChild(temptext);
+        newList.appendChild(templi);
+    }
+    var theNode = getObj("listP");
+    theNode.replaceChild(newList, oldList);
+  }
+}
+
+function getObj(elementID)
+{
+  return document.getElementById(elementID);
+}
+
+
+</script>
+</head>
+<body>
+
+<p>
+<div id="listP"><ul id="teams"><li> Yankees </li><li> Mets </li><li> Red Sox </li></ul>
+</div>
+</p>
+<p>
+<form name="form1">
+<input type="checkbox" name="numbers" 
+       onClick="changeBullets()">Numbers
+<P>
+<input type="button" onClick="addPicture()" value="Add Picture">
+<input type="text" id="filename" size="50">
+<BR>Width<input type="text" id="width">
+<BR>Height<input type="text" id="height">
+</form>
+</p>
+<div id="pictures">
+</div>
+</body>
+</html>

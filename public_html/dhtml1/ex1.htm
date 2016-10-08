@@ -1,0 +1,93 @@
+﻿<html><head><title>Flying Animation</title>
+<script>
+var delay = 10;
+var timerID = "";
+var change = 5;
+var y = -150;
+var x = 50;
+
+function init()
+{
+	startAnim();
+}
+
+/*functions to start and stop the animation*/
+function startAnim()
+{
+	if (timerID=="")
+	{
+		timerID = setInterval("animate()",delay);
+	}
+}
+
+function stopAnim()
+{
+	clearInterval(timerID);
+	timerID="";
+}
+
+function animate()
+{
+    if (y <= -150)
+    {
+    	change = 5;
+        x = -150;
+    }
+    if (y >= 250)
+    {
+    	change = -5;
+    }
+    y = y + change;
+    x = x + 5;   
+    shiftTo(x, y, 2);
+}
+
+function getObj(elementID)
+{
+	return document.getElementById(elementID);
+}
+
+/*This function places a positionable object in 
+  three dimensions (x,y, and z).*/
+function shiftTo(x,y,z)
+{
+  getObj('bird').style.left = x + "px";
+  getObj('bird').style.top = y + "px";
+  getObj('bird').style.zIndex = z;
+  getObj('xloc').value = x;
+  getObj('yloc').value = y;
+}
+
+</script>
+<style type="text/css">
+#title1 { position:absolute;  left:200px; top:80px; 
+		   z-index:3; color:yellow; font-family:sans-serif;  
+		   font-weight:bold; font-size:400%;}
+#title2 { position:absolute; left:205px; top:85px; 
+		   z-index:1; color:navy; font-family:sans-serif;  
+		   font-weight:bold; font-size:400%;}
+#bird { position:absolute; left:0px; top:-150px; z-index:2; }
+#controls { position:absolute; left:10px; top:10px; z-index:1; 
+			background:navy; color:yellow; font-family:serif; 
+			font-weight:bold; width:140px; padding:5px;}
+h1 { font-family:sans-serif; font-size:150%;}
+</style>
+</head>
+<body onload="init();">
+<div id="controls">
+<form>
+<h1>Controls</h1>
+<p>
+<input type="button" value="start" onclick="startAnim();"> 
+<input type="button" value="stop" onclick="stopAnim();">
+<br><br>
+Bird position:<br><br>
+x pos <input type="text" id="xloc" value="0" size="5"><br><br>
+y pos <input type="text" id="yloc" value="0" size="5"></p>
+</form>
+</div>
+<div id="title1">Flying Hummingbird</div>
+<div id="title2">Flying Hummingbird</div>
+<img src="bird.gif" id="bird" width="110" height="150">
+</body>
+</html>

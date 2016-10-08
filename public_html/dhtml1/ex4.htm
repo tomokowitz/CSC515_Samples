@@ -1,0 +1,96 @@
+﻿<html><head><title>Nodes</title>
+<script>
+function getObj(elementID)
+{
+  return document.getElementById(elementID);
+}
+function changeTeam()
+{
+  var theNode = getObj("teams");
+  var newTeam=prompt("Enter a new team","");
+  var index = parseInt(prompt("Enter the position","")) - 1;
+  var newTeamNode=document.createTextNode(newTeam);
+  var newTeamItem = document.createElement("LI");
+  newTeamItem.appendChild(newTeamNode);
+  theNode.replaceChild(newTeamItem, theNode.childNodes[index]);
+}
+function newTeam()
+{
+  var theNode = getObj("teams");
+  var newTeam=prompt("Enter a new team","");
+  var newTeamNode=document.createTextNode(newTeam);
+  var newTeamItem = document.createElement("LI");
+  newTeamItem.appendChild(newTeamNode);
+  theNode.appendChild(newTeamItem);
+}
+function removeTeam()
+{
+  var theNode = getObj("teams");
+  var myTeam = prompt("Enter name of team to remove","");
+  var index = -1;
+  for (i = 0; i < theNode.childNodes.length; i++)
+  {
+     var teamName = theNode.childNodes[i].firstChild.nodeValue;
+     if (teamName == myTeam)
+       index = i;
+  }
+  if (index == -1)
+    alert("Not found");
+  else
+    theNode.removeChild(theNode.childNodes[index]);
+}
+function favoriteTeam()
+{
+  var theNode = getObj("teams");
+  var myTeam = prompt("Enter name of favorite team","");
+  var index = -1;
+  for (i = 0; i < theNode.childNodes.length; i++)
+  {
+     var teamName = theNode.childNodes[i].firstChild.nodeValue;
+     if (teamName == myTeam)
+       index = i;
+  }
+  if (index == -1)
+    alert("Not found");
+  else
+  {
+    theNode.childNodes[index].style.border = "dotted";
+    theNode.childNodes[index].style.width = "100px";
+  }
+}
+function favoriteTeam2()
+{
+  var theNode = getObj("teams");
+  var myTeam = prompt("Enter name of favorite team","");
+  var index = -1;
+  for (i = 0; i < theNode.childNodes.length; i++)
+  {
+     var teamName = theNode.childNodes[i].firstChild.nodeValue;
+     if (teamName == myTeam)
+       index = i;
+  }
+  if (index == -1)
+    alert("Not found");
+  else
+  {
+    var newINode = document.createElement("I");
+    var newTeamNode = document.createTextNode(myTeam);
+    newINode.appendChild(newTeamNode);
+    theNode.childNodes[index].replaceChild(newINode, theNode.childNodes[index].firstChild);
+  }
+}
+</script>
+</head>
+<body>
+<p>
+<! Be careful of extra text in the list! Even carriage returns count in Firefox>
+<ul id="teams"><li>Yankees</li><li>Mets</li><li>Red Sox</li></ul>
+</p>
+<p>
+<input type="button" onClick="changeTeam()" value="Change Team">
+<input type="button" onClick="newTeam()" value="New Team">
+<input type="button" onClick="removeTeam()" value="Remove Team">
+<input type="button" onClick="favoriteTeam()" value="Choose Favorite"></p>
+<input type="button" onClick="favoriteTeam2()" value="Choose Favorite"></p>
+</body>
+</html>

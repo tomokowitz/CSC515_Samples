@@ -1,0 +1,73 @@
+<html><head><title>More Nodes</title>
+<script>
+function rooting(radio)
+{
+	alert("Let's go " + radio.value + "!");
+}
+function makeNewList()
+{
+	var textarea = getObj("newteams");
+	var data = textarea.value;
+        var lines = data.split('\n');
+	emptyNode("radio");
+	if (data == "") return;
+	var theNode = getObj("radio");
+	for (i = 0; i < lines.length; i++)
+	{
+	  var newTeam = lines[i];
+ 	  var newTeamButton;
+	  var newTeamNode;
+	  if (navigator.appName == "Netscape")
+	  {
+         	newTeamNode=document.createTextNode(newTeam);
+   		newTeamButton = document.createElement("INPUT");
+   		newTeamButton.setAttribute("type", "radio");
+   		newTeamButton.setAttribute("name", "teams");
+   		newTeamButton.setAttribute("value", newTeam);
+   		newTeamButton.setAttribute("onclick", "rooting(this)");
+	  }
+	  else
+	  { 
+          	if (i != lines.length - 1)
+            	  newTeam = newTeam.substring(0, newTeam.length - 1);
+        	newTeamNode=document.createTextNode(newTeam);
+   		newTeamButton = document.createElement(
+                            '<input type="radio" name="teams" value="' 
+                            + newTeam + '" onClick="rooting(this);">');
+	  }
+          theNode.appendChild(newTeamButton);
+	  theNode.appendChild(document.createTextNode(newTeam)); 
+        }
+}
+
+function emptyNode(elementID)
+{
+	var theNode = getObj(elementID);
+	for (i= theNode.childNodes.length - 1; i >=0; i--)
+	{
+		theNode.removeChild(theNode.childNodes[i]);
+	}
+}
+
+function getObj(elementID)
+{
+	return document.getElementById(elementID);
+}
+</script>
+</head>
+<body>
+<span id="radio">
+<input type="radio" name="teams" value="Mets" onClick="rooting(this);"> 
+Mets
+<input type="radio" name="teams" value="Yankees" onClick="rooting(this);"> 
+Yankees
+<input type="radio" name="teams" value="Red Sox" onClick="rooting(this);"> 
+Red Sox
+</span>
+<p>
+<input type="button" value="New List" onClick="makeNewList();">
+<p>
+<textarea id="newteams" rows=6></textarea>
+</p>
+</body>
+</html>
