@@ -1,0 +1,125 @@
+<html><head><title>Collapsing Menus</title>
+<script src="browsercodelibrary.js"></script>
+<script src="codelibrary.js"></script>
+<script>
+<!--
+var itemcoloroff = "navy";
+var itemcoloron = "maroon";
+
+var menu1url = new Array();
+menu1url[1] = "http://www.w3.org/MarkUp/";
+menu1url[2] = "http://www.w3.org/People/Raggett/tidy/";
+menu1url[3] = "http://validator.w3.org/";
+
+var menu2url = new Array();
+menu2url[1] = "http://www.w3.org/Style/CSS/";
+menu2url[2] = "http://jigsaw.w3.org/css-validator/";
+
+function togglemenu(menuID) {
+	var themenu="dropdown"+menuID;
+	if (isDisplayed(themenu)=="block"){
+		hidemenu(menuID);
+	}
+         else{
+		showmenu(menuID);
+	}
+}
+
+function showmenu(menuID){
+	var themenu="dropdown"+menuID;
+	setCursor("pointer");
+	setDisplay(themenu,"block");
+	var menucontroller=getObj("menucontrol"+menuID);
+	menucontroller.firstChild.firstChild.data="[ - ]";
+}
+
+function hidemenu(menuID){
+	var themenu="dropdown"+menuID;
+	setCursor("auto");
+	setDisplay(themenu,"none");
+	var menucontroller=getObj("menucontrol"+menuID);
+	menucontroller.firstChild.firstChild.data="[ + ]";
+}
+
+function menuFX(thisobj,theevent){
+	if (theevent=="over"){
+		setColor(thisobj,itemcoloron);
+		setCursor("pointer");
+	}
+        else{
+		setColor(thisobj,itemcoloroff);
+		setCursor("auto");
+	}
+}
+
+function goPage(thisobj,menunum,itemnum){
+	menuFX(thisobj,"out");
+	hidemenu(1);	
+	hidemenu(2);	
+	window.location.href = eval("menu"+menunum+"url["+itemnum+"]");
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+body 	{ background:white; color:black;font-family:serif;} 
+
+h1, h2 	{font-family:sans-serif; color:navy;}
+
+.menucontrol { position:relative; color:navy;
+			   font-weight:bolder;	width:1.5em; }
+
+.menutitle { position:relative; color:navy;
+			 font-weight:bolder; padding:0px; height:1.0em; }
+
+.dropdown {	position:relative; display:none; }
+
+.menuitem {	position:relative; color:navy;
+			font-weight:bolder; left:2.5em; }
+-->
+</style>
+</head>
+<body onload="checkDOM('dhtmlsitesNODOM.html');">
+<h1>Reference Sites for<br>Dynamic HTML</h1>
+<h2>Place-anywhere Collapsing Menus</h2>
+<p>The menu below consists of a set of nested divs that can be placed anywhere 
+on the page. A collapsing/expanding menu will appear when you click the + or - 
+sign next to any menu name. This technique works in the latest versions of 
+Internet Explorer, Netscape Navigator, and all browsers that support the W3C
+standard DOM and CSS.</p>
+
+<div onmouseover="setCursor('pointer');"  onmouseout="setCursor('auto');" 
+     onclick="togglemenu(1);">
+  <span id="menucontrol1" class="menucontrol" ><sup>[ + ]</sup></span>
+  <span id="menutitle1" class="menutitle">HTML Resources</span>
+</div>
+<!--This div contains a hidden dropdown menu.-->
+<div id="dropdown1" class="dropdown">
+  <div class="menuitem" onmouseover="menuFX(this,'over');" 
+       onmouseout="menuFX(this,'out');" onclick="goPage(this,1,1);">
+         HTML Specs</div>
+  <div class="menuitem" onmouseover="menuFX(this,'over');" 
+       onmouseout="menuFX(this,'out');" onclick="goPage(this,1,2);">
+         HTML Tidy</div>
+  <div class="menuitem" onmouseover="menuFX(this,'over');" 
+       onmouseout="menuFX(this,'out');" onclick="goPage(this,1,3);">
+         HTML Validator</div>
+</div>
+<div onmouseover="setCursor('pointer');"  onmouseout="setCursor('auto');" 
+ onclick="togglemenu(2);">
+  <span id="menucontrol2" class="menucontrol"><sup>[ + ]</sup></span>
+  <span id="menutitle2" class="menutitle">CSS Resources</span>
+</div>
+<!--This div contains a hidden dropdown menu.-->
+<div class="dropdown" id="dropdown2">
+  <div class="menuitem" onmouseover="menuFX(this,'over');" 
+       onmouseout="menuFX(this,'out');" onclick="goPage(this,2,1);">
+    CSS Specs</div>
+  <div class="menuitem" onmouseover="menuFX(this,'over');" 
+       onmouseout="menuFX(this,'out');" onclick="goPage(this,2,2);">
+    CSS Validator</div>
+</div>
+
+<p>Click the [ + ] symbol next to any menu title to see the collapsible menus.</p>
+</body>
+</html>
