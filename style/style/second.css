@@ -1,0 +1,27 @@
+﻿/* External style sheet */
+  .heading
+  {
+    color:red;
+    font-style:italic;
+    text-align:center;
+  }
+
+  P.left
+  {
+    left-margin:3em;
+    right-margin:3em;
+  }
+
+  P.right
+  {
+    left-margin:3em;
+    right-margin:3em;
+    text-align:right;
+    font-style:italic;
+  }
+
+  P.centered
+  {
+    text-align:center;
+    font-weight:bold;
+  }

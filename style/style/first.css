@@ -1,0 +1,7 @@
+﻿/* External style sheet */
+  body {color: red; background: orange} 
+  h1 {color: blue; font-size: 18; font-family: Arial; text-align: center} 
+  td {color: green; background: lightblue} 
+  p  {text-indent: .5in; font-size: 14; margin-left: 5%; margin-right: 5%} 
+  a  {color: red; background: lightblue} 
+  a:hover {color:pink; background: blue} 
