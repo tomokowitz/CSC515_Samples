@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CUSTOMERS>
+	<Customer>
+		<CustNo>C0954327</CustNo>
+		<CustFirstName>Sheri</CustFirstName>
+		<CustLastName>Gordon</CustLastName>
+		<CustStreet>336 Hill St.</CustStreet>
+		<CustCity>Littleton</CustCity>
+		<CustState>CO</CustState>
+		<CustZip>80129-5543</CustZip>
+		<CustBal>230</CustBal>
+	</Customer>
+	<Customer>
+		<CustNo>C1010398</CustNo>
+		<CustFirstName>Jim</CustFirstName>
+		<CustLastName>Glussman</CustLastName>
+		<CustStreet>1432 E. Ravenna</CustStreet>
+		<CustCity>Denver</CustCity>
+		<CustState>CO</CustState>
+		<CustZip>80111-0033</CustZip>
+		<CustBal>200</CustBal>
+	</Customer>
+	<Customer>
+		<CustNo>C2388597</CustNo>
+		<CustFirstName>Beth</CustFirstName>
+		<CustLastName>Taylor</CustLastName>
+		<CustStreet>2396 Rafter Rd</CustStreet>
+		<CustCity>Seattle</CustCity>
+		<CustState>WA</CustState>
+		<CustZip>98103-1121</CustZip>
+		<CustBal>500</CustBal>
+	</Customer>
+	<Customer>
+		<CustNo>C3340959</CustNo>
+		<CustFirstName>Betty</CustFirstName>
+		<CustLastName>Wise</CustLastName>
+		<CustStreet>4334 153rd NW</CustStreet>
+		<CustCity>Seattle</CustCity>
+		<CustState>WA</CustState>
+		<CustZip>98178-3311</CustZip>
+		<CustBal>200</CustBal>
+	</Customer>
+	<Customer>
+		<CustNo>C3499503</CustNo>
+		<CustFirstName>Bob</CustFirstName>
+		<CustLastName>Mann</CustLastName>
+		<CustStreet>1190 Lorraine Cir.</CustStreet>
+		<CustCity>Monroe</CustCity>
+		<CustState>WA</CustState>
+		<CustZip>98013-1095</CustZip>
+		<CustBal>0</CustBal>
+	</Customer>
+	<Customer>
+		<CustNo>C8543321</CustNo>
+		<CustFirstName>Ron</CustFirstName>
+		<CustLastName>Thompson</CustLastName>
+		<CustStreet>789 122nd St.</CustStreet>
+		<CustCity>Renton</CustCity>
+		<CustState>WA</CustState>
+		<CustZip>98666-1289</CustZip>
+		<CustBal>85</CustBal>
+	</Customer>
+	<Customer>
+		<CustNo>C8574932</CustNo>
+		<CustFirstName>Wally</CustFirstName>
+		<CustLastName>Jones</CustLastName>
+		<CustStreet>411 Webber Ave.</CustStreet>
+		<CustCity>Seattle</CustCity>
+		<CustState>WA</CustState>
+		<CustZip>98105-1093</CustZip>
+		<CustBal>1500</CustBal>
+	</Customer>
+	<Customer>
+		<CustNo>C8654390</CustNo>
+		<CustFirstName>Candy</CustFirstName>
+		<CustLastName>Kendall</CustLastName>
+		<CustStreet>456 Pine St.</CustStreet>
+		<CustCity>Seattle</CustCity>
+		<CustState>WA</CustState>
+		<CustZip>98105-3345</CustZip>
+		<CustBal>50</CustBal>
+	</Customer>
+	<Customer>
+		<CustNo>C9128574</CustNo>
+		<CustFirstName>Jerry</CustFirstName>
+		<CustLastName>Wyatt</CustLastName>
+		<CustStreet>16212 123rd Ct.</CustStreet>
+		<CustCity>Denver</CustCity>
+		<CustState>CO</CustState>
+		<CustZip>80222-0022</CustZip>
+		<CustBal>100</CustBal>
+	</Customer>
+	<Customer>
+		<CustNo>C9403348</CustNo>
+		<CustFirstName>Mike</CustFirstName>
+		<CustLastName>Boren</CustLastName>
+		<CustStreet>642 Crest Ave.</CustStreet>
+		<CustCity>Englewood</CustCity>
+		<CustState>CO</CustState>
+		<CustZip>80113-5431</CustZip>
+		<CustBal>0</CustBal>
+	</Customer>
+	<Customer>
+		<CustNo>C9432910</CustNo>
+		<CustFirstName>Larry</CustFirstName>
+		<CustLastName>Styles</CustLastName>
+		<CustStreet>9825 S. Crest Lane</CustStreet>
+		<CustCity>Bellevue</CustCity>
+		<CustState>WA</CustState>
+		<CustZip>98104-2211</CustZip>
+		<CustBal>250</CustBal>
+	</Customer>
+	<Customer>
+		<CustNo>C9543029</CustNo>
+		<CustFirstName>Sharon</CustFirstName>
+		<CustLastName>Johnson</CustLastName>
+		<CustStreet>1223 Meyer Way</CustStreet>
+		<CustCity>Fife</CustCity>
+		<CustState>WA</CustState>
+		<CustZip>98222-1123</CustZip>
+		<CustBal>856</CustBal>
+	</Customer>
+	<Customer>
+		<CustNo>C9549302</CustNo>
+		<CustFirstName>Todd</CustFirstName>
+		<CustLastName>Hayes</CustLastName>
+		<CustStreet>1400 NW 88th</CustStreet>
+		<CustCity>Lynnwood</CustCity>
+		<CustState>WA</CustState>
+		<CustZip>98036-2244</CustZip>
+		<CustBal>0</CustBal>
+	</Customer>
+	<Customer>
+		<CustNo>C9857432</CustNo>
+		<CustFirstName>Homer</CustFirstName>
+		<CustLastName>Wells</CustLastName>
+		<CustStreet>123 Main St.</CustStreet>
+		<CustCity>Seattle</CustCity>
+		<CustState>WA</CustState>
+		<CustZip>98105-4322</CustZip>
+		<CustBal>500</CustBal>
+	</Customer>
+	<Customer>
+		<CustNo>C9865874</CustNo>
+		<CustFirstName>Mary</CustFirstName>
+		<CustLastName>Hill</CustLastName>
+		<CustStreet>206 McCaffrey</CustStreet>
+		<CustCity>Littleton</CustCity>
+		<CustState>CO</CustState>
+		<CustZip>80129-5543</CustZip>
+		<CustBal>150</CustBal>
+	</Customer>
+	<Customer>
+		<CustNo>C9943201</CustNo>
+		<CustFirstName>Harry</CustFirstName>
+		<CustLastName>Sanders</CustLastName>
+		<CustStreet>1280 S. Hill Rd.</CustStreet>
+		<CustCity>Fife</CustCity>
+		<CustState>WA</CustState>
+		<CustZip>98222-2258</CustZip>
+		<CustBal>1000</CustBal>
+	</Customer>
+</CUSTOMERS>

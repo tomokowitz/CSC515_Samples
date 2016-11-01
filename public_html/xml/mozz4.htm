@@ -1,0 +1,38 @@
+﻿<html>
+<head>
+<script>
+var xmlDoc;
+function importXML(file) 
+{
+	xmlDoc = document.implementation.createDocument("", "", null)
+	xmlDoc.onload = readXML;
+	xmlDoc.load(file);
+}
+function readXML()
+{
+	var customers=xmlDoc.getElementsByTagName("Customer");
+	document.write('<table border="1">');
+	document.write('<tr><th>CustNo</th><th>First Name</th><th>Last Name</th>' +
+	  '<th>Address</th><th>City</th><th>State</th><th>Zip</th><th>Balance</th></tr>');
+	for ( var i=0; i<customers.length; i++) 
+	{
+ 		document.write('<tr>');
+		document.write('<td>' + customers[i].getAttribute("custNo") + '</td>');
+		var data=customers[i].childNodes;
+		for (var j=0; j<data.length; j++)
+		{
+			if (data.item(j).nodeType == 1) // element, text is 3
+ 				document.write('<td>' + data.item(j).firstChild.nodeValue + '</td>');
+		}
+ 		document.write('</tr>');
+	}
+	document.write('</table>');
+}
+</script>
+</head>
+<body>
+<script>
+	importXML("customers2.xml"); 
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿<HTML>
+<HEAD>
+<TITLE>Example 2</TITLE>
+    <SCRIPT LANGUAGE="JavaScript">
+    
+		if (window.XMLHttpRequest)
+  		{// code for IE7+, Firefox, Chrome, Opera, Safari
+  			xmlhttp=new XMLHttpRequest();
+  		}
+		else
+  		{// code for IE6, IE5
+  			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  		}
+      	xmlhttp.open("GET","customers.xml",false);
+		xmlhttp.send();
+		xmlDoc=xmlhttp.responseXML;
+		
+      function start()
+      {
+        childrenNodes = xmlDoc.childNodes[0].childNodes; 
+        // xmlDoc.childNodes is an array that consists of the root element
+        // xmlDoc.childNodes[0].childNodes is an array of all the root's children
+
+	    var child1 = childrenNodes;
+	    alert (childrenNodes.length + " children of the root");
+	  }
+     </SCRIPT>
+
+</HEAD>
+<BODY onload="start()">
+	<div id="display"></div>
+</BODY>
+</HTML>

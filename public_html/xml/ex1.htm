@@ -1,0 +1,55 @@
+﻿<HTML>
+<HEAD>
+<TITLE>Example 	1</TITLE>
+    <SCRIPT LANGUAGE="JavaScript">
+		if (window.XMLHttpRequest)
+  		{// code for IE7+, Firefox, Chrome, Opera, Safari
+  			xmlhttp=new XMLHttpRequest();
+  		}
+		else
+  		{// code for IE6, IE5
+  			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  		}
+      	xmlhttp.open("GET","customers.xml",false);
+		xmlhttp.send();
+		xmlDoc=xmlhttp.responseXML;
+
+      function start()
+      {
+        var table = ""; 
+	    table += "<TABLE BORDER=2>";
+        table += "<TR><TH>Customer Number</TH><TH>Name</TH><TH>Address</TH>" +
+                         "<TH>City</TH><TH>State</TH><TH>Zip</TH><TH>Balance</TH></TR>";  
+        customers = xmlDoc.getElementsByTagName("Customer"); 
+        for (i = 0; i < customers.length; i++)
+        { 
+           var customer = customers[i];
+           custno = customer.getElementsByTagName("CustNo")[0].childNodes[0].nodeValue;
+           custfirstname = customer.getElementsByTagName("CustFirstName")[0].childNodes[0].nodeValue;
+           custlastname = customer.getElementsByTagName("CustLastName")[0].childNodes[0].nodeValue;
+           custstreet = customer.getElementsByTagName("CustStreet")[0].childNodes[0].nodeValue;
+           custcity = customer.getElementsByTagName("CustCity")[0].childNodes[0].nodeValue;
+           custstate = customer.getElementsByTagName("CustState")[0].childNodes[0].nodeValue;
+           custzip = customer.getElementsByTagName("CustZip")[0].childNodes[0].nodeValue;
+           custbal = customer.getElementsByTagName("CustBal")[0].childNodes[0].nodeValue;
+
+
+           table += "<TR>";
+           table += "<TD>"+ custno + "</TD>";
+		   table += "<TD>"+ custfirstname + " " + custlastname + "</TD>";
+           table += "<TD>"+ custstreet + "</TD>";
+           table += "<TD>"+ custcity + "</TD>";
+           table += "<TD>"+ custstate + "</TD>";
+           table += "<TD>"+ custzip + "</TD>";
+           table += "<TD>"+ custbal + "</TD>";          
+	       table += "</TR>";
+         }
+         table += "</TABLE>";
+         document.getElementById("display").innerHTML = table;
+       }
+    </SCRIPT>
+</HEAD>
+<BODY onload="start()">
+	<div id="display"></div>
+</BODY>
+</HTML>

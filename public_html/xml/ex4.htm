@@ -1,0 +1,93 @@
+﻿<HTML>
+<HEAD>
+<TITLE>Example 4</TITLE>
+
+<SCRIPT>
+    
+if (window.XMLHttpRequest)
+{// code for IE7+, Firefox, Chrome, Opera, Safari
+  	xmlhttp=new XMLHttpRequest();
+}
+else
+{// code for IE6, IE5
+  	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+}
+xmlhttp.open("GET","customers.xml",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML;
+
+function showData()
+{ 
+  document.getElementById('display').innerHTML = "";
+  var match = linearSearch();
+
+  if (match == -1)
+  {
+    alert("Sorry, no match");
+    return;
+  }
+  makeData(match); 
+}
+
+function linearSearch()
+{ 
+  var searchCustNo = document.getElementById('custno').value;
+  customers = xmlDoc.getElementsByTagName("Customer"); 
+  for (i = 0; i < customers.length; i++)
+  { 
+     var customer = customers[i];
+     thisCustNo = customer.getElementsByTagName("CustNo")[0].childNodes[0].nodeValue;
+     if (thisCustNo == searchCustNo)
+		 return i;
+  }
+  return -1;
+}
+
+function makeData(match)
+{		
+  		myCustomer = xmlDoc.getElementsByTagName("Customer")[match];
+  		table = "";
+  	    table += "<TABLE BORDER=2>";
+	    table += "<TR>";
+
+	    // print heading
+        for (j = 0; j < myCustomer.childNodes.length; j++)
+	    {
+	    	if (myCustomer.childNodes[j].nodeType == 1) // if node is an element
+	    	{
+	    		// display the name of the node in a heading
+          		table += "<TH>" + myCustomer.childNodes[j].nodeName + "</TH>";
+          	}
+        }
+	    table += "</TR>";
+
+	    // add the data
+	    table += "<TR>";
+	    // for each child of that customer
+	    for (j = 0; j < myCustomer.childNodes.length; j++)
+	    {
+	       	// get a child of that node
+	       	thatProperty = myCustomer.childNodes[j];
+	       	if (thatProperty.nodeType == 1) 	    	
+			{
+				// get the value of the first child of that node (the text)
+           	  	table += "<TD>" + thatProperty.childNodes[0].nodeValue + "</TD>";
+           	}
+         }
+	     table += "</TR>";
+         table += "</TABLE>"; 
+         document.getElementById("display").innerHTML = table;
+
+}
+
+</SCRIPT>
+</HEAD>
+<BODY>
+Enter customer number:: <INPUT TYPE="text" id="custno">
+<BR><INPUT TYPE="button" VALUE="Find Information" 
+           onClick='showData();'>
+<DIV id="display">
+</DIV>
+
+</BODY>
+</HTML>

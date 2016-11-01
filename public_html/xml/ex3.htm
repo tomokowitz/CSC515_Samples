@@ -1,0 +1,80 @@
+﻿<HTML>
+<HEAD>
+<TITLE>Example 3</TITLE>
+    <SCRIPT LANGUAGE="JavaScript">
+    
+		if (window.XMLHttpRequest)
+  		{// code for IE7+, Firefox, Chrome, Opera, Safari
+  			xmlhttp=new XMLHttpRequest();
+  		}
+		else
+  		{// code for IE6, IE5
+  			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  		}
+      	xmlhttp.open("GET","customers.xml",false);
+		xmlhttp.send();
+		xmlDoc=xmlhttp.responseXML;
+		
+      function start()
+      {
+        var table = ""; 
+        childrenNodes = xmlDoc.childNodes[0].childNodes; 
+        // xmlDoc.childNodes is an array that consists of the root element
+        // xmlDoc.childNodes[0].childNodes is an array of the root's children
+        
+        // test to see if first child is an element (nodeType of 1)
+        if (childrenNodes[0].nodeType == 1)
+        {
+        	heading = childrenNodes[0];
+       	}
+        else // second child must be the first element
+        {
+        	heading = childrenNodes[1];
+        }
+        	
+	    table += "<TABLE BORDER=2>";
+	    table += "<TR>";
+	 
+	    // heading is first element child of the root
+        for (j = 0; j < heading.childNodes.length; j++)
+	    {
+	    	if (heading.childNodes[j].nodeType == 1) // if node is an element
+	    	{
+	    		// display the name of the node in a heading
+          		table += "<TH>" + heading.childNodes[j].nodeName + "</TH>";
+          	}
+        }
+	    table += "</TR>";
+
+	    // add the data
+        for (i = 0; i < childrenNodes.length; i++)
+        {
+           // get a child of the root
+           thisChild = childrenNodes[i];
+           if (thisChild.nodeType == 1) // if it's an element
+		   {
+	       		table += "<TR>";
+	       		// for each child of that node
+	       		for (j = 0; j < thisChild.childNodes.length; j++)
+	       		{
+	       			// get a child of that node
+	       			thatProperty = thisChild.childNodes[j];
+	       			if (thatProperty.nodeType == 1) 	    	
+					{
+						// get the value of the first child of that node (the text)
+           	  			table += "<TD>" + thatProperty.childNodes[0].nodeValue + "</TD>";
+           	  		}
+           	  	}
+           }
+	       table += "</TR>";
+         }
+         table += "</TABLE>"; 
+         document.getElementById("display").innerHTML = table;
+       }
+    </SCRIPT>
+
+</HEAD>
+<BODY onload="start()">
+	<div id="display"></div>
+</BODY>
+</HTML>
